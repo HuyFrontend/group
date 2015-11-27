@@ -1,0 +1,70 @@
+.about#about
+  if (isChange)
+    .block-information
+      .grid-fluid
+        .main-box
+          if (isPage === "consulting")
+            h2.title!=$i18n.about.consulting.title
+              span!=$i18n.about.consulting.text_green
+            .content
+              p
+                strong!=$i18n.about.consulting.text_bold
+              p!=$i18n.about.consulting.text1
+              p!=$i18n.about.consulting.text2
+          else
+            h2.title!=$i18n.about.solutions.title
+              span!=$i18n.about.solutions.text_orange
+            .content
+              p
+                strong!=$i18n.about.solutions.text_bold
+              p!=$i18n.about.solutions.text1
+              p!=$i18n.about.solutions.text2
+  else
+    .block-information
+      .inner
+        h2.title.hidden-sm-up!=$i18n.about.introduce.title
+              span!=$i18n.about.introduce.text_default
+        .content
+          .image-box
+            +img("../images/img-map.png",$i18n.about.introduce.alt_map)
+          .main-box
+            h2.title.visible-sm-up!=$i18n.about.introduce.title
+              span!=$i18n.about.introduce.text_default
+            .content
+              p
+                strong!=$i18n.about.introduce.text_bold
+              p!=$i18n.about.introduce.text1
+              p!=$i18n.about.introduce.text2
+              p
+                span.green!=$i18n.about.introduce.text_green
+                !=$i18n.about.introduce.featured_text1
+              p
+                span.orange!=$i18n.about.introduce.text_orange
+                !=$i18n.about.introduce.featured_text2
+            +link($i18n.about.introduce.link_download).hide.link-icon.download
+              span.icon.icon-download
+              span.text #{$i18n.about.introduce.link_download}
+    .block-brand
+      .item.bgd-green.consulting-item
+        .item-inner
+          h3.title #{$i18n.about.brand.consulting.title}
+          ul
+            li #{$i18n.about.brand.consulting.item1}
+            li #{$i18n.about.brand.consulting.item2}
+            li #{$i18n.about.brand.consulting.item3}
+            li #{$i18n.about.brand.consulting.item4}
+            li #{$i18n.about.brand.consulting.item5}
+          +link($i18n.about.brand.consulting.link_discover, 'consulting.html').btn.btn-black
+            span!=$i18n.about.brand.consulting.link_discover
+      .item.bgd-orange.solution-item
+        .item-inner
+          h3.title #{$i18n.about.brand.solution.title}
+          ul
+            li #{$i18n.about.brand.solution.item1}
+            li #{$i18n.about.brand.solution.item2}
+            li #{$i18n.about.brand.solution.item3}
+            li #{$i18n.about.brand.solution.item4}
+            li #{$i18n.about.brand.solution.item5}
+          +link($i18n.about.brand.solution.link_discover, 'solutions.html').btn.btn-black
+            span!=$i18n.about.brand.consulting.link_discover
+

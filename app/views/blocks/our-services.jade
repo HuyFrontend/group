@@ -1,0 +1,69 @@
+.our-services#services
+  .grid-fluid
+    .inner
+      if (isPage === "consulting")
+        h2.title Our services&nbsp;
+          //- span Boost sales
+        .list-our-service(data-slide, data-type="ourService", data-toggle="SetHeightItem")
+          .item
+            .image
+              +img('../images/degital-strategy.png', 'Digital Strategy')
+            .service-info
+              .service-title
+                h2.title-1 Digital
+              ul(data-set-size="['height']")
+                li Digitail
+                li Technical Consultant
+                li Digital Architecture Strategy &amp; Development
+          .item
+            .image
+              +img('../images/degital-design.png', 'Digital Design')
+            .service-info
+              .service-title
+                h2.title-1 Digital Design
+              ul(data-set-size="['height']")
+                li Web/Mobile design
+                li UX/Ui design
+                li Ergonomics
+      else
+        h2.title Our services&nbsp;
+          //- span Increase revenue
+        .list-our-service(data-slide, data-type="ourService", data-toggle="SetHeightItem")
+          .item
+            .image
+              +img('../images/web-mobile.png', 'Web & Mobile Develoment')
+            .service-info
+              .service-title
+                h2.title-1 Web &amp; Mobile Development
+              ul(data-set-size="['height']")
+                li E-Commerce, CMS, Intranet
+                li Responsive Web Design
+                li Adobe AEM, Sitecore
+                li Drupal, Wordpress, Magento
+                li iPhone, iPad, Apple Watch
+                li Android Phone &amp; Tablet
+                li Windows Phone &amp; Tablet
+          .item
+            .image.image-testing
+              +img('../images/testing.png', 'Testing')
+            .service-info
+              .service-title
+                h2.title-1 Testing
+              ul(data-set-size="['height']")
+                li Integration Test
+                li Compatibility Test
+                li Performance/Stress Test
+                li Automation Test - Cucumber
+                li Selenium WebDriver
+                li Security Test - Acunetix
+           .item
+            .image.image-support
+              +img('../images/support.png', 'Support')
+            .service-info
+              .service-title
+                h2.title-1 Support
+              ul
+                li Level 1, Level 2, &amp; Level 3 Support
+                li Call Center
+                li Webmastering
+                li Sustem monitoring

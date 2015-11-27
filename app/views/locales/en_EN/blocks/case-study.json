@@ -1,0 +1,242 @@
+  "case_study": {
+    "main_title": "Case study",
+    "consulting": {
+      "case_study1": {
+        "title": "Philippines Bank",
+        "date": "2015",
+        "info": "Website",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Front-end Consultant provided on-site training, technical design, and management for developing the Bank website."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "HTML5, NodeJS"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix provided on-site Consultant to support the bank website development in Manila."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study2": {
+        "title": "French Cosmetic Retailer",
+        "date": "2015",
+        "info": "Native Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Sutrix provided on-site Consultant to make storyboard specifications. Sutrix also do off-site Android development."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Android Native App"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Consultant developed Storyboard for an Enterprise retail store app to manage cosmetic inventory for 400 retail stores."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study3": {
+        "title": "Menu Card DK",
+        "date": "2015",
+        "info": "Native Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Sutrix make wireframes, graphic design and storyboard specifications."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "IOS Native App"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Consultant design & developed Storyboard for an online food delivery service in Denmark."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='http://www.menucard.dk' target='_blank' title='Menu Card DK'>www.menucard.dk</a>"
+          }
+        }
+      }
+    },
+    "solutions": {
+      "case_study1": {
+        "title": "French Cosmetic Retailer",
+        "date": "2015",
+        "info": "Native Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Sutrix provided on-site Consultant to make storyboard specifications. Sutrix also do off-site Android development."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Android Native App"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did mobile development as well as backoffice development."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study2": {
+        "title": "Menu Card DK",
+        "date": "2015",
+        "info": "Native Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Sutrix make wireframes, graphic design and storyboard specifications."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "IOS Native App"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did mobile development as well as backoffice development."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='http://www.menucard.dk' target='_blank' title='Menu Card DK'>www.menucard.dk</a>"
+          }
+        }
+      },
+      "case_study3": {
+        "title": "Donut E-commerce",
+        "date": "2014",
+        "info": "Website",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "E-commerce site for ordering donuts."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Magento"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did front end, back end development."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study4": {
+        "title": "Airline website",
+        "date": "2014 - 2015",
+        "info": "Airline Website",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Airlines portal."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "HTML 5, Teamsite"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix develop the front-end of the site and ensure it works on all browsers and devices."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study5": {
+        "title": "E-commerce Japan",
+        "date": "2015",
+        "info": "E-commerce Website",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Maintenance of E-commerce website."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Adobe AEM"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did front end, back end development."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study6": {
+        "title": "Car companion App",
+        "date": "2011 - 2015",
+        "info": "Native Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "Car app help users manage their car maintenance with calendar reminders and maintenance guide. App also help find the car in case user forgot where it was parked."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Native iOS & Android"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did all the native software development."
+          },
+          "item4": {
+            "title": "Link",
+            "content": "<a href='javascript:void(0)' title='Contact us' data-target='contact'>Contact us</a>"
+          }
+        }
+      },
+      "case_study7": {
+        "title": "GlaxoSmithKline",
+        "date": "2014 - 2015",
+        "info": "Application",
+        "list_item": {
+          "item1": {
+            "title": "Description",
+            "content": "We Quit App helps user to quit smoking by motivating and rewarding smokers when they don’t smoke."
+          },
+          "item2": {
+            "title": "Technologies",
+            "content": "Phonegap for iOS & Android"
+          },
+          "item3": {
+            "title": "Role",
+            "content": "Sutrix did front end, back end development."
+          },
+          "item4": {
+            "title": "Award",
+            "content": "<a href='http://www.mediapost.com/appyawards/winners/' target='_blank' title='Best Marketing App, Appy Award 2015'>Best Marketing App, Appy Award 2015</a>"
+          },
+          "item5": {
+            "title": "Link",
+            "content": "<a href='http://wequitnow.com' target='_blank' title='GlaxoSmithKline'>wequitnow.com</a>"
+          }
+        }
+      }
+    },
+    "link_view": "View all case studies"
+  },

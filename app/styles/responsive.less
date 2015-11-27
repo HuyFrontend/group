@@ -1,0 +1,27 @@
+// Responsive
+@media @screen-sm-only {
+  body {
+    font-size: @font-size-base-sm;
+  }
+}
+@media @screen-xs-only {
+  .btn-border {
+    .px2em(~"font-size", 15px);
+    .px2em(~"padding", 6px 10px, 15px);
+  }
+  .btn-black {
+    display: block;
+    .px2em(~"font-size", 16px);
+    // .px2em(~"padding", 15px 40px 15px 10px, 16px);
+    span {
+      width: 100%;
+    }
+  }
+  .btn-yellow {
+    .px2em(~"font-size", 14px);
+    .px2em(~"padding", 10px 35px);
+  }
+  .icon-arrow-circle {
+    .size(40px);
+  }
+}

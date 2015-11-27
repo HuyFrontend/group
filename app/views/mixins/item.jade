@@ -1,0 +1,40 @@
+mixin item-overal(obj)
+  .item.col-xs-6.col-sm-3&attributes(attributes)
+    .item-inner
+      .quantity
+        span!= obj.no
+      p.text!= obj.text
+mixin partner-item(obj)
+  .item.partner&attributes(attributes)
+    +link(obj.title, obj.href)(target= '_blank')
+      .img-wraper(class = obj.class)
+        .content
+          +img(obj.src, obj.alt)
+mixin office-item(obj)
+  .item&attributes(attributes)
+    .img-wraper(class = obj.class)
+      +img(obj.src, obj.alt)
+    .info-overlay
+      .inner
+        h3.title!= obj.title
+        p.address!= obj.address
+        span.phone!= obj.phone
+mixin leader-item(obj)
+  .item&attributes(attributes)
+    .img-wraper
+      +img(obj.src, obj.alt)
+    .info-overlay
+      .content
+        h3.name!= obj.name
+        p.position!= obj.position
+        p.desc!= obj.desc
+mixin item-service(obj)
+  - if (typeof(obj.href) === 'undefined') obj.href = 'javascript:void(0)'
+  .parent-tooltip.item&attributes(attributes)
+    a(href= obj.href, data-tooltip-type="",data-toggle="TooltipElement", data-tooltip-content= "<div class='inner'><h3 class='title-tooltip'>"+obj.tooltip_title+"</h3><div class='content-tooltip'>"+obj.tooltip_content+"</p></div></div><span class='triangle'></span>")
+      span.icon-services(class= obj.class)
+      span.text!= obj.title
+mixin item-case-study(obj)
+  .item&attributes(attributes)
+    h4.item-title!= obj.title
+    p!= obj.content

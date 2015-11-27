@@ -1,0 +1,48 @@
+  "contact": {
+    "title": "Contact",
+    "brand1": {
+      "name": "Sutrix consulting",
+      "country": "France",
+      "address1": "9 Bis rue du Commandant Pilot",
+      "address2": "92 200 Neuilly sur Seine, France",
+      "phone": "+33 6 42 86 88 18"
+    },
+    "brand2": {
+      "name": "Sutrix consulting",
+      "country": "Scandinavia",
+      "address1": "Kronprinsessegade 54 1306",
+      "address2": "Copenhagen K Denmark",
+      "phone": "+45 22 22 18 38"
+    },
+    "brand3": {
+      "name": "Sutrix solutions",
+      "country": "Vietnam",
+      "address1": "15th Floor, Blue Sky Tower, 1 Bach Dang Street, ",
+      "address2": "Ward 2, Tan Binh District, Ho Chi Minh City, Vietnam",
+      "phone": "+84 8 3997 5901"
+    },
+    "brand4": {
+      "name": "Sutrix solutions",
+      "country": "Mauritius",
+      "address1": "14 Avenue des Lataniers, ",
+      "address2": "Quatre Bornes, Mauritius"
+    },
+    "errormsg": {
+      "name": "Please enter your name",
+      "email": "Please enter email address",
+      "message": "Please enter comments",
+      "security": "Please enter code"
+    },
+    "locations" : {
+      "consulting": "Sutrix Consulting has offices in France and Demark for on-site digital consulting and management services.",
+      "solutions": "Sutrix Solutions has offices in Vietnam and Mauritius for digital production and support services.",
+      "paris" : "Paris office",
+      "scandinavia" : "Scandinavia office",
+      "vietnam" : "Ho Chi Minh office",
+      "mauritius" : "Mauritius office",
+      "nyc" : "NYC office",
+      "japan" : "Japan office",
+      "office" : "Offices on world"
+    },
+    "backToTop": "Top"
+  },

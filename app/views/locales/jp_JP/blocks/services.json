@@ -1,0 +1,63 @@
+  "services": {
+    "main": {
+      "title": "サービス",
+      "content": "Sutrix Groupはデジタルサービスをワンストップで提供することで、プロジェクトの開発&運用プロセス管理をシンプルにすることが可能です。"
+    },
+    "consulting": {
+      "item_main": {
+        "title": "SUTRIX CONSULTING",
+        "desc": "Boost Sales",
+        "content": "E-Commerce, CMS, Intranet<br>Responsive Web Design<br>Adobe AEM, Sitecore<br>Drupal, Wordpress, Magento"
+      },
+      "item1": {
+        "title": "Pre-sales Support",
+        "content": "We help analyze and estimate effort. We can also help make prototypes."
+      },
+      "item2": {
+        "title": "Requirement Analysis",
+        "content": " We document requirements and design technical solutions."
+      },
+      "item3": {
+        "title": "Specifications",
+        "content": "We help define and design complex applications."
+      },
+      "item4": {
+        "title": "Technical Support",
+        "content": "We advise on technical issues."
+      },
+      "item5": {
+        "title": "Training",
+        "content": "We train your team on new technology."
+      }
+    },
+    "solutions": {
+      "item_main": {
+        "title": "SUTRIX SOLUTIONS",
+        "desc": "Boost Sales",
+        "content": "E-Commerce, CMS, Intranet<br>Responsive Web Design<br>Adobe AEM, Sitecore<br>Drupal, Wordpress, Magento"
+      },
+      "item1": {
+        "title": "Web Development",
+        "content": "We make responsive front-end and back-end web application."
+      },
+      "item2": {
+        "title": "Mobile Development",
+        "content": "We make native and hybrid mobile apps."
+      },
+      "item3": {
+        "title": "Testing",
+        "content": "We test the apps on desktop and mobile devices."
+      },
+      "item4": {
+        "title": "Maintenance",
+        "content": "We enhance and upgrade your application."
+      },
+      "item5": {
+        "title": "Call Center/Support",
+        "content": "We provide customer and tech support."
+      }
+    },
+    "deployment": "DEPLOYMENT",
+    "maintenance": "24/7 MAINTENANCE"
+  },
+

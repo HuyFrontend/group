@@ -1,0 +1,60 @@
+.slider-block
+  .slider.slider-for(data-slide)
+    case isPage
+      when 'consulting'
+        .item.consulting(style="background-image: url('../images/upload/slider-2.jpg');")
+          .inner(data-toggle="ScrollMenu")
+            h1.title #{$i18n.slider.slider2.title}
+            p.info #{$i18n.slider.slider2.info}
+            +link($i18n.slider.slider1.scrolling, 'javascript:;', $i18n.slider.slider1.link).btn.icon.icon-arrow-circle.hvr-hang(data-target="services")
+          p.location #{$i18n.slider.slider2.location}
+        .item.group(style="background-image: url('../images/upload/slider-1.jpg');")
+          .inner(data-toggle="ScrollMenu")
+            h1.title #{$i18n.slider.slider1.title}
+            p.info #{$i18n.slider.slider1.info}
+            +link($i18n.slider.slider2.link, 'index.html').btn.btn-border
+          p.location #{$i18n.slider.slider1.location}
+        .item.solution(style="background-image: url('../images/upload/slider-3.jpg');")
+          .inner
+            h1.title #{$i18n.slider.slider3.title}
+            p.info #{$i18n.slider.slider3.info}
+            +link($i18n.slider.slider3.link, 'solutions.html').btn.btn-border
+          p.location #{$i18n.slider.slider3.location}
+      when 'solutions'
+        .item.solution(style="background-image: url('../images/upload/slider-3.jpg');")
+          .inner(data-toggle="ScrollMenu")
+            h1.title #{$i18n.slider.slider3.title}
+            p.info #{$i18n.slider.slider3.info}
+            +link($i18n.slider.slider1.scrolling, 'javascript:;', $i18n.slider.slider1.link).btn.icon.icon-arrow-circle.hvr-hang(data-target="services")
+          p.location #{$i18n.slider.slider3.location}
+        .item.group(style="background-image: url('../images/upload/slider-1.jpg');")
+          .inner(data-toggle="ScrollMenu")
+            h1.title #{$i18n.slider.slider1.title}
+            p.info #{$i18n.slider.slider1.info}
+            +link($i18n.slider.slider3.link, 'index.html').btn.btn-border
+          p.location #{$i18n.slider.slider1.location}
+        .item.consulting(style="background-image: url('../images/upload/slider-2.jpg');")
+          .inner
+            h1.title #{$i18n.slider.slider2.title}
+            p.info #{$i18n.slider.slider2.info}
+            +link($i18n.slider.slider2.link, 'consulting.html').btn.btn-border
+          p.location #{$i18n.slider.slider2.location}
+      default
+        .item.group(style="background-image: url('../images/upload/slider-1.jpg');")
+          .inner(data-toggle="ScrollMenu")
+            h1.title #{$i18n.slider.slider1.title}
+            p.info #{$i18n.slider.slider1.info}
+            +link($i18n.slider.slider1.scrolling, 'javascript:;', $i18n.slider.slider1.link).btn.icon.icon-arrow-circle.hvr-hang(data-target="services")
+          p.location #{$i18n.slider.slider1.location}
+        .item.consulting(style="background-image: url('../images/upload/slider-2.jpg');")
+          .inner
+            h1.title #{$i18n.slider.slider2.title}
+            p.info #{$i18n.slider.slider2.info}
+            +link($i18n.slider.slider2.link, 'consulting.html').btn.btn-border
+          p.location #{$i18n.slider.slider2.location}
+        .item.solution(style="background-image: url('../images/upload/slider-3.jpg');")
+          .inner
+            h1.title #{$i18n.slider.slider3.title}
+            p.info #{$i18n.slider.slider3.info}
+            +link($i18n.slider.slider3.link, 'solutions.html').btn.btn-border
+          p.location #{$i18n.slider.slider3.location}

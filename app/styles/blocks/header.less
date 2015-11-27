@@ -1,0 +1,315 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 90;
+  .inner {
+    max-width: @width-container;
+    position: relative;
+    // box-shadow: 0 4px 5px 0 rgba(50, 50, 50, .75);
+    background: black;
+    max-width: 1400px;
+    margin: 0 auto 8px;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 100%;
+      .size(100%, 8px);
+      background: url('../images/bgd-shadow.png') repeat-x;
+    }
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+    .px2em(~"padding", 19 0);
+    .px2em(~"max-width", 192);
+    .green-theme &,
+    .orange-theme & {
+      .px2em(~"max-width", 170);
+    }
+  }
+  .group {
+    position: absolute;
+    z-index: 21;
+    top: 50%;
+    .px2em(~"right", 59);
+    .px2em(~"height", 18);
+    .px2em(~"line-height", 18);
+    transform: translate(0,-50%);
+    a {
+      .px2em(~"font-size", 17);
+    }
+  }
+  .language {
+    .px2em(~"margin-right", 30);
+    .px2em(~"line-height", 19px);
+    a {
+      color: @gray-1;
+      display: inline-block;
+      padding: 0 3px;
+      font-family: @font-raleway-medium;
+      border-left: 1px solid @gray-1;
+      &:first-child {
+        border-left: none;
+      }
+    }
+    .jp {
+      font-family: @font-family-sans-serif;
+    }
+    .active,
+    .no-touch & a:hover {
+      color: @white-dark;
+    }
+
+  }
+  .top-menu {
+    color: @white-dark;
+    .px2em(~"font-size", 17);
+    font-family: @font-raleway-semibold;
+  }
+  .menu-wrapper {
+    @wContent: 452px;
+    width: 100%;
+    .px2em(~"max-width", @wContent);
+    .px2em(~"padding", 0 80px);
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+    transition-property: top, opacity, visibility;
+    transform: translate3d(0,0,0);
+  }
+  .menu {
+    .px2em(~"padding", 63 0 30);
+    li {
+      .px2em(~"padding", 17 0);
+    }
+    a {
+      .px2em(~"font-size", 25);
+      font-family: @font-raleway-bold;
+      color: @white-dark-2;
+      text-transform: uppercase;
+    }
+    .active a,
+    .no-touch & a:hover {
+      color: @yellow-primary;
+    }
+  }
+  .link-page {
+    border-top: 1px solid white;
+    .px2em(~"padding", 30 0);
+  }
+  .social {
+    text-align: center;
+    .px2em(~"padding", 31 0 22);
+    border-top: 1px solid white;
+    li {
+      display: inline-block;
+      .px2em(~"padding", 0 10);
+      vertical-align: bottom;
+    }
+    li a {
+      .no-touch &:hover {transform: scale(1.2, 1.2);}
+    }
+    .icon-fb {
+      .size(19px,27px);
+    }
+    .icon-linkedin {
+      .size(29px,27px);
+    }
+  }
+  .btn-menu {
+    @h: 23px;
+    @hLine: 3px;
+    display: inline-block;
+    .px2em(~"margin-left", 15px);
+    .px2em(~"margin-top", -4px);
+    vertical-align: middle;
+    background: transparent;
+    border: none;
+    position: relative;
+    .size(28px, @h);
+    .line {
+      .size(28px,@hLine);
+      position: absolute;
+      left: 0;
+      background: white;
+      transition: .2s;
+      transition-property: top, transform;
+      transition-delay: .2s, 0s;
+      &-top {
+        top: 0;
+      }
+      &-bottom {
+        top: @h - @hLine;
+      }
+      &-middle {
+        top: 50%;
+        margin-top: -@hLine/2;
+      }
+    }
+  }
+  .active {
+    .line {
+      transition-delay: 0s, .2s;
+    }
+    .line-top, .line-bottom {
+      top: 50%;
+    }
+    .line-top {
+      transform: rotate(45deg);
+    }
+    .line-middle {
+      opacity: 0;
+    }
+    .line-bottom {
+      transform: rotate(-45deg);
+    }
+  }
+  .collapse {
+    visibility: visible;
+    top: 100%;
+    opacity: 1;
+    z-index: 20;
+  }
+  .block-talk-us {
+    .size(16.643em,3.643em);
+    .px2em(~"line-height", 51);
+    background: url('@{img}bgd-talk-to-us.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 100%;
+    .px2em(~"right", 59);
+    &:before,
+    &:after
+    {
+      position: absolute;
+      content: "";
+      bottom: 6px;
+      left: 35px;
+      z-index: -1;
+      top: 80%;
+      width: 30%;
+      box-shadow: -10px 3px 10px #000;
+      transform: rotate(-10deg);
+    }
+    &:after
+    {
+      right: 30px;
+      left: auto;
+      box-shadow: 10px 3px 10px #000;
+      transform: rotate(10deg);
+    }
+  }
+  .talk-us {
+    display: block;
+    .px2em(~"font-size", 18);
+    font-family: @font-raleway-bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    .icon {
+      .px2em(~"margin-right", 16, 18);
+      vertical-align: middle;
+    }
+    &:hover {
+      .no-touch & {
+        color: @gray-dark;
+        .icon {
+          background-image: url('@{img}icon-question-a.png');
+        }
+      }
+    }
+  }
+}
+
+@media @screen-sm-down {
+  .header {
+    .language {
+      .px2em(~"padding-bottom", 28);
+      margin-right: 0;
+      a {
+        .px2em(~"padding", 0 6);
+        .px2em(~"font-size", 17);
+      }
+    }
+    .btn-menu {height: 19px;}
+    .btn-menu {
+      .line-middle {
+        top: 55%;
+      }
+      .line-bottom {
+        top: 17px;
+      }
+    }
+    .active {
+      .line-bottom {
+        top: 50%;
+      }
+    }
+  }
+}
+
+@media @screen-xs-only {
+  .header {
+    .inner {
+      .px2em(~"padding", 0);
+      .px2em(~"min-height", 71);
+    }
+    .logo {
+      .px2em(~"padding", 17 0);
+    }
+    .group {
+      .px2em(~"right", 15);
+    }
+    .logo {
+      .px2em(~"max-width", 176);
+      .green-theme &,
+      .orange-theme & {
+        .px2em(~"max-width", 130);
+      }
+    }
+    .top-menu {
+      font-size: 0;
+    }
+    .btn-menu {
+      width: 22px;
+      .px2em(~"padding", 9 0 9);
+      .line {
+        width: 22px;
+        &-top {
+          top: 2px;
+        }
+        &-bottom {
+          top: 16px;
+        }
+      }
+    }
+    .active {
+      .line-top, .line-bottom {
+        top: 50%;
+      }
+    }
+    .menu-wrapper {
+      max-width: none;
+      .px2em(~"padding", 0 15);
+      overflow-y: auto;
+    }
+    .menu {
+      .px2em(~"padding", 12 0);
+      a {.px2em(~"font-size", 16);}
+    }
+    .social {
+      .px2em(~"padding-top", 11);
+    }
+  }
+}
+
+

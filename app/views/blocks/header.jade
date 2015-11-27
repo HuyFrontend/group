@@ -1,0 +1,67 @@
+-var activeEN = ''
+-var activeFR = ''
+-var activeJP = ''
+if ($i18n.lang == 'en')
+  -activeEN = 'active'
+if ($i18n.lang == 'fr')
+  -activeFR = 'active'
+if ($i18n.lang == 'jp')
+  -activeJP = 'active'
+
+header.header
+  .inner
+    if (isPage=="consulting")
+      +link-img($i18n.header.alt_logo_consulting,'../images/Sutrix_Consulting.png','consulting.html').logo
+    else if (isPage=="solutions")
+      +link-img($i18n.header.alt_logo_solutions,'../images/Sutrix_Solutions.png','solutions.html').logo
+    else
+      +link-img($i18n.header.alt_logo_group,'../images/logo.png','index.html').logo
+    .group
+      .language.left.visible-md-up
+        +link($i18n.header.lang_fr, '/fr_FR')(class=activeFR)
+        +link($i18n.header.lang_en, '/en_EN')(class=activeEN)
+        +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
+      .top-menu.right #{$i18n.header.menu}
+        button(type= 'button', title= $i18n.header.menu, data-toggle="ToggleMenu", data-target="menu-wrapper").btn-menu
+          span.line.line-top
+          span.line.line-middle
+          span.line.line-bottom
+    #menu-wrapper.menu-wrapper(data-toggle="SetSizeElement")
+      if (isPage=="consulting")
+        +nav-data([{title: $i18n.header.menu1, data: 'about'},
+                 {title: $i18n.header.menu2, data: 'services'},
+                 {title: $i18n.header.menu8, data: 'case-study'},
+                 {title: $i18n.header.menu9, data: 'career'},
+                 {title: $i18n.header.menu4, data: 'contact'}]).menu(data-toggle="ScrollMenu", data-hide-on-scroll="menu-wrapper", data-scroll-when-holver="false")
+        ul.menu.link-page
+          li: +link($i18n.header.menu7, 'index.html')
+          li: +link($i18n.header.menu6, 'solutions.html')
+      else if (isPage=="solutions")
+        +nav-data([{title: $i18n.header.menu1, data: 'about'},
+                 {title: $i18n.header.menu2, data: 'services'},
+                 {title: $i18n.header.menu8, data: 'case-study'},
+                 {title: $i18n.header.menu9, data: 'career'},
+                 {title: $i18n.header.menu4, data: 'contact'}]).menu(data-toggle="ScrollMenu", data-hide-on-scroll="menu-wrapper", data-scroll-when-holver="false")
+        ul.menu.link-page
+          li: +link($i18n.header.menu7, 'index.html')
+          li: +link($i18n.header.menu5, 'consulting.html')
+      else
+        +nav-data([{title: $i18n.header.menu1, data: 'about'},
+                 {title: $i18n.header.menu2, data: 'services'},
+                 {title: $i18n.header.menu3, data: 'management'},
+                 {title: $i18n.header.menu4, data: 'contact'}]).menu(data-toggle="ScrollMenu", data-hide-on-scroll="menu-wrapper", data-scroll-when-holver="false")
+        ul.menu.link-page
+          li: +link($i18n.header.menu5, 'consulting.html')
+          li: +link($i18n.header.menu6, 'solutions.html')
+      ul.social
+        //- li: +link('Facebook', 'http://facebook.com/sutrixmedia').icon.icon-fb(target= '_blank')
+        //- li: +link('Twitter', 'http://twitter.com/sutrixmedia').icon.icon-twitter-2(target= '_blank')
+        li: +link('Linkein', linkedInLink).icon.icon-linkedin(target= '_blank')
+      .language.visible-xs.visible-sm
+        +link($i18n.header.lang_fr, '/fr_FR')(class=activeFR)
+        +link($i18n.header.lang_en, '/en_EN')(class=activeEN)
+        +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
+    .block-talk-us.visible-sm-up(data-toggle="ScrollMenu")
+      +link-data($i18n.header.talkus,'javascript:void(0)',$i18n.header.talkus,'contact').talk-us
+        span.icon.icon-question
+        span #{$i18n.header.talkus}

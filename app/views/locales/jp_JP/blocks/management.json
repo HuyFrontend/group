@@ -1,0 +1,26 @@
+  "management": {
+    "leader1": {
+      "alt": "david pugliesi",
+      "name": "david pugliesi",
+      "position": "代表",
+      "desc": "IT業界での20年以上の開発経験をもち、とフランスでのビジネスとマネジメントノウハウを"
+    },
+    "leader2": {
+      "alt": "Quan Tran",
+      "name": "Quan Tran",
+      "position": "副代表",
+      "desc": "QuanはUSでIBMやCanonでキャリアをスタートし、IT業界で20年以上のキャリアを積んできました。チームが高品質なサービスを提供できるように、グループのパートナーシップ、システムやプロセスを監督しています。"
+    },
+    "leader3": {
+      "alt": "Christophe Lam",
+      "name": "Christophe Lam",
+      "position": "事業開発部長",
+      "desc": "Christopheは10年間グローバルの事業開発、アカウントマネジメント、フランスとベトナムでのコンサルティングに従事してきました。新規事業と既存事業の成長を管轄しています。"
+    },
+    "leader4": {
+      "alt": "Khang Phan",
+      "name": "Khang Phan",
+      "position": "開発事業部長",
+      "desc": "Khangは全てのサプロダクトを管理し、社内のオペレーション、プロセス、ポリシーが効果的に機能しているかを監督しています。Khangは2004年にPHPプログラマーとして入社してから業績が認められ、現在の開発事業部長のポストへとキャリアを積んできました。"
+    }
+  },

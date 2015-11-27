@@ -1,0 +1,34 @@
+section.career.load-ajax-finish#career(data-toggle="CareerElement")
+  .grid-fluid
+    h2.title #{$i18n.career.title}&nbsp;
+      span #{$i18n.career.sub_title}
+  .grid-fluid
+    .positions-apply(data-apply)
+      .row
+        .col-sm-6
+          h3.title #{$i18n.career.positions_apply.title}
+          .content
+            p!=$i18n.career.positions_apply.desc1
+            p!=$i18n.career.positions_apply.desc2
+        .col-sm-6.open-position.custom-padding(data-disable)
+          h3.title #{$i18n.career.positions_apply.open_position.title}
+          .content
+            ul
+              li(data-item="career", data-target="/data/en_EN/career-content-php.html")
+                +link-1($i18n.career.positions_apply.open_position.team1)
+                  span.icon-arrow
+              li(data-item="career", data-target="/data/en_EN/career-content-qc.html")
+                +link-1($i18n.career.positions_apply.open_position.team2)
+                  span.icon-arrow
+              li(data-item="career", data-target="/data/en_EN/career-content-frontent.html")
+                +link-1($i18n.career.positions_apply.open_position.team3)
+                  span.icon-arrow
+              li(data-item="career", data-target="/data/en_EN/career-content-java.html")
+                +link-1($i18n.career.positions_apply.open_position.team4)
+                  span.icon-arrow
+              li(data-item="career", data-target="/data/en_EN/career-content-project-manager.html")
+                +link-1($i18n.career.positions_apply.open_position.team5)
+                  span.icon-arrow
+            .ajax-overlay.hide
+              +img('../images/ajax_loader.gif')
+    .positions-detail.hide(data-detail)

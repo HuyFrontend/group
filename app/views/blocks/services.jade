@@ -1,0 +1,93 @@
+section#services.block-services
+  .grid-fluid
+    .inner-services
+      h2.title!=$i18n.services.main.title
+      p!=$i18n.services.main.content
+    .block-sutrix-services.visible-md-up
+      .sutrix-consulting
+        .item.item-main
+          //- a(href= "javascript:void(0)", data-tooltip-type="",data-toggle="TooltipElement", data-tooltip-content= "<div class='inner'><h3 class='title-tooltip'>"+$i18n.services.consulting.item_main.title+"</h3><div class='content-tooltip'>"+$i18n.services.consulting.item_main.content+"</p></div></div><span class='triangle'></span>")
+          span.icon-services.icon-main
+          h3.item-title!=$i18n.services.consulting.item_main.title
+          p.desc!=$i18n.services.consulting.item_main.desc
+        +item-service({
+          title: $i18n.services.consulting.item1.title,
+          class: 'icon-business',
+          tooltip_title: $i18n.services.consulting.item1.title,
+          tooltip_content: $i18n.services.consulting.item1.content
+        }).item1
+        +item-service({
+          title: $i18n.services.consulting.item2.title,
+          class: 'icon-pre-sale',
+          tooltip_title: $i18n.services.consulting.item2.title,
+          tooltip_content: $i18n.services.consulting.item2.content
+        }).item2
+        +item-service({
+          title: $i18n.services.consulting.item3.title,
+          class: 'icon-market',
+          tooltip_title: $i18n.services.consulting.item3.title,
+          tooltip_content: $i18n.services.consulting.item3.content
+        }).item3
+        +item-service({
+          title: $i18n.services.consulting.item4.title,
+          class: 'icon-plat-form',
+          tooltip_title: $i18n.services.consulting.item4.title,
+          tooltip_content: $i18n.services.consulting.item4.content
+        }).item4
+        +item-service({
+          title: $i18n.services.consulting.item5.title,
+          class: 'icon-tech',
+          tooltip_title: $i18n.services.consulting.item5.title,
+          tooltip_content: $i18n.services.consulting.item5.content
+        }).item5
+        //- +item-service({
+        //-   title: $i18n.services.consulting.item6.title,
+        //-   class: 'icon-process',
+        //-   tooltip_title: $i18n.services.consulting.item6.title,
+        //-   tooltip_content: $i18n.services.consulting.item6.content
+        //- }).item6
+        span.item.item-plane
+      .sutrix-solutions
+        .item.item-main
+          //- .parent-tooltip
+          //- a(href= "javascript:void(0)", data-tooltip-type="right-tooltip",data-toggle="TooltipElement", data-tooltip-content= "<div class='inner'><h3 class='title-tooltip'>"+$i18n.services.solutions.item_main.title+"</h3><div class='content-tooltip'>"+$i18n.services.solutions.item_main.content+"</p></div></div><span class='triangle'></span>")
+          span.icon-services.icon-main
+          h3.item-title!=$i18n.services.solutions.item_main.title
+          p.desc!=$i18n.services.solutions.item_main.desc
+        +item-service({
+          title: $i18n.services.solutions.item1.title,
+          class: 'icon-testing',
+          tooltip_title: $i18n.services.solutions.item1.title,
+          tooltip_content: $i18n.services.solutions.item1.content
+        }).item1
+        +item-service({
+          title: $i18n.services.solutions.item2.title,
+          class: 'icon-development',
+          tooltip_title: $i18n.services.solutions.item2.title,
+          tooltip_content: $i18n.services.solutions.item2.content
+        }).item2
+        +item-service({
+          title: $i18n.services.solutions.item3.title,
+          class: 'icon-design',
+          tooltip_title: $i18n.services.solutions.item3.title,
+          tooltip_content: $i18n.services.solutions.item3.content
+        }).item3
+        +item-service({
+          title: $i18n.services.solutions.item4.title,
+          class: 'icon-spec',
+          tooltip_title: $i18n.services.solutions.item4.title,
+          tooltip_content: $i18n.services.solutions.item4.content
+        }).item4
+        +item-service({
+          title: $i18n.services.solutions.item5.title,
+          class: 'icon-need-analysis',
+          tooltip_title: $i18n.services.solutions.item5.title,
+          tooltip_content: $i18n.services.solutions.item5.content
+        }).item5
+      .deployment
+        span.icon-services.icon-approved
+        p.text!=$i18n.services.deployment
+      .maintenance
+        span.icon-services.icon-approved
+        p.text!=$i18n.services.maintenance
+  include overview

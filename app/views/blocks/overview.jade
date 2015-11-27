@@ -1,0 +1,196 @@
+.overview
+  .list-overal
+    .row(data-toggle="TabElement")
+      +item-overal({
+        no: $i18n.overview.total.number1,
+        text: $i18n.overview.total.text1
+        })(data-item-tab, data-target="item-1", class= "active")
+      +item-overal({
+        no: $i18n.overview.total.number2,
+        text: $i18n.overview.total.text2
+        })(data-item-tab, data-target="item-2")
+      +item-overal({
+        no: $i18n.overview.total.number3,
+        text: $i18n.overview.total.text3
+        })(data-item-tab, data-target="item-3")
+      +item-overal({
+        no: $i18n.overview.total.number4,
+        text: $i18n.overview.total.text4
+        })(data-item-tab, data-target="item-4")
+.office
+  .list-offices.offices-worldwide(data-slide, data-type="office", data-slidetablet="4", data-item="item-1", data-toggle="HoverElement")
+    +office-item({
+      alt: $i18n.overview.office1.title,
+      src: "../images/upload/office-1.jpg",
+      title: $i18n.overview.office1.title,
+      address: $i18n.overview.office1.address,
+      class: "gray-overlay",
+      phone: $i18n.overview.office1.phone
+      })
+    +office-item({
+      alt: $i18n.overview.office2.title,
+      src: "../images/upload/office-2.jpg",
+      title: $i18n.overview.office2.title,
+      address: $i18n.overview.office2.address,
+      class: "gray-overlay",
+      phone: $i18n.overview.office2.phone
+      })
+    +office-item({
+      alt: $i18n.overview.office3.title,
+      src: "../images/upload/office-3.jpg",
+      title: $i18n.overview.office3.title,
+      address: $i18n.overview.office3.address,
+      class: "gray-overlay",
+      phone: $i18n.overview.office3.phone
+      })
+    +office-item({
+      alt: $i18n.overview.office4.title,
+      src: "../images/upload/office-4.jpg",
+      title: $i18n.overview.office4.title,
+      address: $i18n.overview.office4.address,
+      class: "gray-overlay",
+      phone: $i18n.overview.office4.phone
+      })
+    +office-item({
+      alt: $i18n.overview.office5.title,
+      src: "../images/upload/office-5.jpg",
+      title: $i18n.overview.office5.title,
+      address: $i18n.overview.office5.address,
+      class: "gray-overlay",
+      phone: $i18n.overview.office5.phone
+      })
+  .list-offices.employees.hide(data-slide, data-type="office", data-slidetablet="3", data-item="item-2", data-toggle="HoverElement")
+    +office-item({
+      alt: $i18n.overview.employee1.title,
+      src: "../images/upload/photo_team_01.jpg",
+      title: $i18n.overview.employee1.title,
+      address: $i18n.overview.employee1.address,
+      phone: $i18n.overview.employee1.phone
+      })
+    +office-item({
+      alt: $i18n.overview.employee2.title,
+      src: "../images/upload/photo_team_02.jpg",
+      title: $i18n.overview.employee2.title,
+      address: $i18n.overview.employee2.address,
+      phone: $i18n.overview.employee2.phone
+      })
+    +office-item({
+      alt: $i18n.overview.employee3.title,
+      src: "../images/upload/photo_team_03.jpg",
+      title: $i18n.overview.employee3.title,
+      address: $i18n.overview.employee3.address,
+      phone: $i18n.overview.employee3.phone
+      })
+    +office-item({
+      alt: $i18n.overview.employee4.title,
+      src: "../images/upload/photo_team_04.jpg",
+      title: $i18n.overview.employee4.title,
+      address: $i18n.overview.employee4.address,
+      phone: $i18n.overview.employee4.phone
+      })
+    +office-item({
+      alt: $i18n.overview.employee5.title,
+      src: "../images/upload/photo_team_05.jpg",
+      title: $i18n.overview.employee5.title,
+      address: $i18n.overview.employee5.address,
+      phone: $i18n.overview.employee5.phone
+      })
+    +office-item({
+      alt: $i18n.overview.employee6.title,
+      src: "../images/upload/photo_team_06.jpg",
+      title: $i18n.overview.employee6.title,
+      address: $i18n.overview.employee6.address,
+      phone: $i18n.overview.employee6.phone
+      })
+  .list-offices.clients.hide(data-slide, data-type="office", data-item="item-3")
+    +partner-item({
+      alt: $i18n.overview.client2.title,
+      src: "../images/upload/photo_partner_01.jpg",
+      title: $i18n.overview.client2.title,
+      href: 'http://www.digitaslbi.com/fr/'
+      })
+    +partner-item({
+      alt: $i18n.overview.client3.title,
+      src: "../images/upload/photo_partner_02.jpg",
+      title: $i18n.overview.client3.title,
+      href: 'http://www.razorfish.com/'
+      })
+    +partner-item({
+      alt: $i18n.overview.client4.title,
+      src: "../images/upload/photo_partner_03.png",
+      title: $i18n.overview.client4.title,
+      href: 'http://www.digitalartsnetwork.com'
+      })
+    +partner-item({
+      alt: $i18n.overview.client1.title,
+      src: "../images/upload/photo_partner_05.png",
+      title: $i18n.overview.client1.title,
+      href: 'http://www.tbwa.com/'
+      })
+    +partner-item({
+      alt: $i18n.overview.client5.title,
+      src: "../images/upload/photo_partner_04.jpg",
+      href: 'http://www.dentsuix.com/',
+      title: $i18n.overview.client5.title
+      })
+    +partner-item({
+      alt: $i18n.overview.client6.title,
+      src: "../images/upload/photo_partner_06.png",
+      href: 'http://www.viseo.com/fr',
+      title: $i18n.overview.client6.title
+      })
+    +partner-item({
+      alt: $i18n.overview.client9.title,
+      src: "../images/upload/photo_partner_09.png",
+      href: 'https://www.oyez.org/',
+      title: $i18n.overview.client9.title
+      })
+    +partner-item({
+      alt: $i18n.overview.client7.title,
+      src: "../images/upload/photo_partner_07.png",
+      href: 'http://www.awakit-groupe.com/',
+      title: $i18n.overview.client7.title
+      })
+    +partner-item({
+      alt: $i18n.overview.client8.title,
+      src: "../images/upload/photo_partner_08.png",
+      href: 'http://www.pearlmine.com/',
+      title: $i18n.overview.client8.title
+      })
+    +partner-item({
+      alt: $i18n.overview.client10.title,
+      src: "../images/upload/photo_partner_10.png",
+      href: 'http://www.keyneosoft.com/',
+      title: $i18n.overview.client10.title
+      })
+  .list-offices.technologies.hide( data-slide, data-type="office", data-item="item-4")
+    +partner-item({
+      alt: $i18n.overview.technology1.title,
+      src: "../images/upload/photo_technology_1.png",
+      title: $i18n.overview.technology1.title,
+      href: 'https://solutionpartners.adobe.com/home/partnerFinder.html'
+      })
+    +partner-item({
+      alt: $i18n.overview.technology2.title,
+      src: "../images/upload/photo_technology_2.png",
+      title: $i18n.overview.technology2.title,
+      href: 'http://www.sitecore.net/'
+      })
+    +partner-item({
+      alt: $i18n.overview.technology3.title,
+      src: "../images/upload/photo_technology_3.png",
+      title: $i18n.overview.technology3.title,
+      href: ' https://www.hybris.com/en/'
+      })
+    +partner-item({
+      alt: $i18n.overview.technology4.title,
+      src: "../images/upload/photo_technology_4.png",
+      title: $i18n.overview.technology4.title,
+      href: 'https://mspartner.microsoft.com/en/us/Pages/index.aspx'
+      })
+    +partner-item({
+      alt: $i18n.overview.technology5.title,
+      src: "../images/upload/photo_technology_5.png",
+      title: $i18n.overview.technology5.title,
+      href: 'http://www.oracle.com/partners/index.html'
+      })

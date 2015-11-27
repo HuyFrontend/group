@@ -1,0 +1,70 @@
+mixin colors(items)
+  .row.colors
+    each item in items
+      .col-xs-6.col-sm-3.col-md-2: .color-item
+        .view(style="background-color: #{item.color}")
+        .color-name!=item.name
+mixin icons(items)
+  .row.icons
+    each item in items
+      -itemFormat = '.' + item.split(' ')[0] + '.' + item.split(' ')[1]
+      .col-sm-4.col-md-3: .icon-item
+        span.view(class=item)
+        .icon-name!=itemFormat
+mixin btn-tempalte(opts)
+  .btn-viewer
+    h3=opts.title
+    if block
+      block
+    span.view!=opts.usage
+
+extends layouts/template
+
+block vars
+  -title = 'Style Guide'
+
+block container
+  style.
+    .template {line-height: 1.3em;}
+    .template .color-item {padding: 5px; border: 1px solid #ccc; margin-bottom: 15px;}
+    .template .color-item .view {height: 30px; margin-bottom: 10px; border: 1px solid #f1f1f1;}
+    .template .color-item .color-name {white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+    .template .icon-item {text-align: center; margin-bottom: 15px;}
+    .template .icon-item .view {display: inline-block;}
+    .template .icon-item .icon-name {white-space: nowrap; text-overflow: ellipsis; overflow: hidden; margin-top: 10px;}
+    .template .btn-viewer .view {display: block; margin-top: 10px;}
+  h1 Style Guide
+  h2 Color
+  h3 Basic
+  +colors([
+    {color: '#73c4b3', name: '@green-primary'},
+    {color: '#ea7a62', name: '@orange-primary'},
+    {color: '#efc153', name: '@yellow-primary'}
+  ])
+  h3 Gray
+  +colors([
+    {color: '#3d3d3d', name: '@gray-primary'},
+    {color: '#656565', name: '@gray-dark'},
+    {color: '#727272', name: '@gray-light'},
+    {color: '#ccc', name: '@gray-1'}
+  ])
+  h2 Icon
+  +icons(['icon icon-arrow-time', 'icon icon-arrows-updown', 'icon icon-download', 'icon icon-question'])
+  +icons(['icon icon-fb', 'icon icon-twitter-1', 'icon icon-twitter-2', 'icon icon-arrow-next'])
+  +icons(['icon icon-arrow-circle', 'icon icon-linkedin', 'icon icon-arrow-down', 'icon icon-arrow-prev'])
+  +icons(['icon icon-quote-open', 'icon icon-quote-close'])
+  h2 Button
+  .row
+    .col-xs-6.col-sm-4.col-md-3
+      +btn-tempalte({title: 'Button Icon Only', usage: '.btn.icon.icon-arrow-circle'})
+        +link('Sutrix Group').btn.icon.icon-arrow-circle
+    .col-xs-6.col-sm-4.col-md-3
+      +btn-tempalte({title: 'Button with border', usage: '.btn.btn-border'})
+        +link('discover our services').btn.btn-border
+  .row
+    .col-xs-12.col-sm-4.col-md-3
+      +btn-tempalte({title: 'Button black', usage: '.btn.btn-black'})
+        +link('discover our services').btn.btn-black
+    .col-xs-6.col-sm-4.col-md-3
+      +btn-tempalte({title: 'Button yellow', usage: '.btn.btn-color'})
+        +link('Send').btn.btn-color

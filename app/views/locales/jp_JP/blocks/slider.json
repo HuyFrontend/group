@@ -1,0 +1,21 @@
+  "slider": {
+    "slider1": {
+      "title": "Sutrix group",
+      "info": "世界中にデジタルコンサルティングとデジタルソリューションを提供いたします。",
+      "link": "Sutrix group",
+      "location": "Hong Kong",
+      "scrolling": "Srolling Down"
+    },
+    "slider2": {
+      "title": "Sutrix consulting",
+      "info": "アプリケーションの仕様や高度なデジタルテクノロジープラットフォームの設計コンサルティングを世界中に提供いたします。",
+      "link": "discover our services",
+      "location": "Paris, France"
+    },
+    "slider3": {
+      "title": "Sutrix solutions",
+      "info": "web & mobile開発、サービスイン後のサポート＆メンテナンスを提供いたします。",
+      "link": "discover our services",
+      "location": "Ho Chi Minh City, Vietnam"
+    }
+  },

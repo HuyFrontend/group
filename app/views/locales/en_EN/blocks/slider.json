@@ -1,0 +1,21 @@
+  "slider": {
+    "slider1": {
+      "title": "Sutrix group",
+      "info": "Provides digital consultancy and digital production services worldwide.",
+      "link": "Sutrix group",
+      "location": "Hong Kong",
+      "scrolling": "Srolling Down"
+    },
+    "slider2": {
+      "title": "Sutrix consulting",
+      "info": "Provides on-site consultants for application specifications and designing complex digital technology platforms.",
+      "link": "discover our services",
+      "location": "Paris, France"
+    },
+    "slider3": {
+      "title": "Sutrix solutions",
+      "info": "Provides web & mobile development with ongoing support & maintenance.",
+      "link": "discover our services",
+      "location": "Ho Chi Minh City, Vietnam"
+    }
+  },

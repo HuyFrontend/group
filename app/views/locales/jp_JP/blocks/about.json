@@ -1,0 +1,48 @@
+ "about": {
+    "introduce": {
+      "title": "About&nbsp;",
+      "text_default": "Sutrix group",
+      "text_bold": "現地でのデジタルコンサルティングとグローバルなプロダクションサービスを提供いたします。私達はグローバルテクノロジープラットフォームの設計・開発からサービス開始後のサポート&メンテナンスサービスまで、全てを提供できることが強みです。",
+      "text1": "2015年現在、Sutrix Groupは5か国に350以上のスタッフが在籍し、世界中のお客様へサービスを提供しています。",
+      "text2": "Sutrix Group展開する2つの事業",
+      "text_green" :"Sutrix Consulting<br>",
+      "text_orange" :"Sutrix Solutions<br>",
+      "featured_text1" :"アプリケーションの仕様や高度なデジタルテクノロジープラットフォームの設計コンサルティング",
+      "featured_text2" :"web & mobile開発、サービスイン後のサポート＆メンテナンス",
+      "link_download" : "Download Sutrix presentation"
+    },
+    "consulting": {
+      "title": "About &nbsp;",
+      "text_bold": "Sutrix Consulting currently has 2 offices in Copenhagen and Paris. We provide technology strategy consulting for multinationals who requires scalable, maintainable, global digital systems. Our consultant will work with your team to gather requirements and design optimized digital solutions for maximum impact &amp; ROI.",
+      "text_green": "Sutrix Consulting",
+      "text1": "As companies now require global apps optimized to work across devices and regions, our consultant will tailor design your application’s UX with the appropriate front-end and back-end frameworks for your business needs.",
+      "text2": "We can also provide on-site consulting, training and development as needed."
+      },
+      "solutions": {
+        "title": "About &nbsp;",
+        "text_orange": "Sutrix Solutions",
+        "text_bold": "Sutrix Solutions is located in Ho Chi Minh City and Mauritius. We build web &amp; mobile apps for the largest global brands in the Automotive, Tire, Banking, Insurance, Hospitality and Media industry.",
+        "text1": "Sutrix Solutions have long term partnerships with top tier Digital Agencies and System Integrators in the US, France, Denmark, Australia, Japan & Singapore. Our multinational management team with an experienced production team and a proven software development process ensures on-time delivery with highest possible quality and within budget.",
+        "text2": "We develop CMS, E-Commerce, Intranet, Mobile Apps, Social Media. We also test web & mobile apps to ensure it works seamlessly cross-platform on desktops and mobile devices."
+      },
+    "brand": {
+      "consulting": {
+        "title": "Sutrix Consulting",
+        "item1": "プレセールスサポート",
+        "item2": "要件分析",
+        "item3": "仕様/テクニカルデザイン",
+        "item4": "テクニカルサポート",
+        "item5": "トレーニング",
+        "link_discover": "More Details"
+      },
+      "solution": {
+        "title": "Sutrix Solutions",
+        "item1": "Web開発",
+        "item2": "モバイル開発",
+        "item3": "テスト",
+        "item4": "メンテナンス",
+        "item5": "コールセンター/サポート",
+        "link_discover": "More Details"
+      }
+    }
+  },

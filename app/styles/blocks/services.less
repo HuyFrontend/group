@@ -1,0 +1,484 @@
+.block-services {
+  .px2em(~"padding-top", 67);
+  .inner-services {
+    font-family: @font-raleway-bold;
+    color: @gray-primary;
+    .title {
+      .px2em(~"font-size", 31);
+      .px2em(~"margin-bottom", 28, 31);
+    }
+    p {
+      .px2em(~"font-size", 16);
+      line-height: 1.6;
+    }
+  }
+}
+
+.block-sutrix-services {
+  .px2em(~"max-width", 1095);
+  .px2em(~"min-height", 390);
+  .px2em(~"margin", 95 auto 85);
+  background: url('@{img}bgd-service.png') no-repeat;
+  position: relative;
+  .item {
+    position: absolute;
+    text-align: center;
+    .text {
+      font-family: @font-raleway-semibold;
+      .px2em(~"font-size", 13);
+      line-height: 1.4;
+    }
+    a {
+      display: block;
+    }
+  }
+  .icon-approved {
+    .size(50px,53px);
+    background: url('@{img}icon-approved.jpg');
+    margin-bottom: 0;
+  }
+}
+.icon-services {
+  display: block;
+  margin: 0 auto 15px;
+  font-size: 0;
+  color: transparent;
+  background: url('@{img}wi-icon-services.png') no-repeat;
+}
+
+.deployment .text,
+.maintenance .text,
+.sutrix-consulting .item-main .item-title,
+.sutrix-solutions .item-main .item-title {
+  color: white;
+  .px2em(~"font-size", 17);
+  .px2em(~"padding", 5 0, 17);
+}
+.sutrix-consulting,
+.sutrix-consulting a,
+.no-touch .sutrix-consulting a:hover {
+  color: @green-primary;
+
+}
+.sutrix-solutions,
+.sutrix-solutions a,
+.no-touch .sutrix-solutions a:hover {
+  color: @orange-primary;
+}
+.sutrix-consulting .item-main,
+.sutrix-solutions .item-main {
+  .desc {
+    .px2em(~"font-size", 18);
+    font-style: italic;
+  }
+}
+.deployment .text,
+.maintenance .text {
+  background: #222;
+  text-align: center;
+}
+.deployment {
+  position: absolute;
+  .px2em(~"width", 146);
+  .px2em(~"bottom", -11);
+  .px2em(~"left", 332);
+}
+.maintenance {
+  position: absolute;
+  .px2em(~"width", 205);
+  .px2em(~"bottom", -10);
+  .px2em(~"right", 161);
+}
+
+.sutrix-consulting {
+  .ui-tooltip {
+    .inner {
+      background: @green-primary;
+    }
+    .triangle:after {
+      border-top-color: @green-primary;
+    }
+  }
+  .item-main {
+    .px2em(~"top", -55);
+    .px2em(~"left", 70);
+    .px2em(~"width", 215);
+    .item-title {
+      background-color: @green-primary;
+      .px2em(~"margin", -10 0 10, 17);
+    }
+  }
+  .item1 {
+    .px2em(~"top", 6);
+    .px2em(~"left", 327);
+  }
+  .item2 {
+    .px2em(~"width", 65);
+    .px2em(~"top", 32);
+    .px2em(~"left", 468);
+  }
+  .item3 {
+    .px2em(~"width", 100);
+    .px2em(~"top", 28);
+    .px2em(~"left", 557);
+  }
+  .item4 {
+    .px2em(~"width", 72);
+    .px2em(~"top", 29);
+    .px2em(~"left", 678);
+  }
+  .item5 {
+    .px2em(~"width", 63);
+    .px2em(~"top", 24);
+    .px2em(~"left", 790);
+  }
+  .item6 {
+    .px2em(~"width", 78);
+    .px2em(~"top", 24);
+    .px2em(~"left", 833);
+  }
+  .item-plane {
+    .size(11.85em,3.57em);
+    background: url('@{img}icon-plane.png');
+    background-size: 100% 100%;
+    .px2em(~"top", -47);
+    .px2em(~"left", 225);
+  }
+  .icon-main {
+    .size(166px,118px);
+    background: url('@{img}icon-consulting.png');
+    margin-bottom: 0;
+  }
+}
+
+.sutrix-solutions {
+  .item-main {
+    .px2em(~"top", 71);
+    .px2em(~"right", -4);
+    .px2em(~"width", 185);
+    .item-title {
+      background-color: @orange-primary;
+      .px2em(~"margin", -68 0 10, 17);
+    }
+  }
+  .item1 {
+    .px2em(~"width", 100);
+    .px2em(~"top", 185);
+    .px2em(~"right", 558);
+  }
+  .item2 {
+    .px2em(~"width", 87);
+    .px2em(~"top", 183);
+    .px2em(~"right", 460);
+  }
+  .item3 {
+    .px2em(~"width", 45);
+    .px2em(~"top", 181);
+    .px2em(~"right", 390);
+  }
+  .item4 {
+    .px2em(~"width", 90);
+    .px2em(~"top", 180);
+    .px2em(~"right", 273);
+  }
+  .item5 {
+    .px2em(~"width", 90);
+    .px2em(~"top", 179);
+    .px2em(~"right", 171);
+  }
+  .icon-main {
+    .size(124px,130px);
+    background: url('@{img}icon-solution.jpg');
+    margin-bottom: 0;
+  }
+}
+
+.icon-business {
+  .size(98px,67px);
+  margin-bottom: 4px;
+  .no-touch .sutrix-consulting .item1:hover &,
+  .sutrix-consulting .item1.active & {
+    background-position: 0 -67px;
+  }
+}
+.icon-pre-sale {
+  .size(32px,32px);
+  background-position: -157px -25px;
+  margin-bottom: 13px;
+  .no-touch .sutrix-consulting .item2:hover &,
+  .sutrix-consulting .item2.active & {
+    background-position: -157px -92px;
+  }
+}
+.icon-market {
+  .size(27px,36px);
+  background-position: -237px -21px;
+  margin-bottom: 13px;
+  .no-touch .sutrix-consulting .item3:hover &,
+  .sutrix-consulting .item3.active & {
+    background-position: -237px -88px;
+  }
+}
+.icon-plat-form {
+  .size(51px,34px);
+  background-position: -313px -22px;
+  .no-touch .sutrix-consulting .item4:hover &,
+  .sutrix-consulting .item4.active & {
+    background-position: -313px -89px;
+  }
+}
+.icon-tech {
+  .size(29px,39px);
+  background-position: -423px -17px;
+  .no-touch .sutrix-consulting .item5:hover &,
+  .sutrix-consulting .item5.active & {
+    background-position: -423px -84px;
+  }
+}
+.icon-process {
+  .size(38px);
+  background-position: -526px -16px;
+  .no-touch .sutrix-consulting .item6:hover &,
+  .sutrix-consulting .item6.active & {
+    background-position: -526px -83px;
+  }
+}
+
+.icon-testing {
+  .size(58px,40px);
+  background-position: 0 -142px;
+  margin-bottom: 13px;
+  .no-touch .sutrix-solutions .item1:hover &,
+  .sutrix-solutions .item1.active & {
+    background-position: 0 -189px;
+  }
+}
+
+.icon-development {
+  .size(40px);
+  background-position: -100px -139px;
+  .no-touch .sutrix-solutions .item2:hover &,
+  .sutrix-solutions .item2.active & {
+    background-position: -100px -186px;
+  }
+}
+
+.icon-design {
+  .size(42px,41px);
+  background-position: -193px -136px;
+  .no-touch .sutrix-solutions .item3:hover &,
+  .sutrix-solutions .item3.active & {
+    background-position: -193px -183px;
+  }
+}
+.icon-spec {
+  .size(62px,42px);
+  background-position: -267px -135px;
+  .no-touch .sutrix-solutions .item4:hover &,
+  .sutrix-solutions .item4.active & {
+    background-position: -267px -182px;
+  }
+}
+.icon-need-analysis {
+  .size(35px,41px);
+  background-position: -382px -133px;
+  margin-bottom: 17px;
+  .no-touch .sutrix-solutions .item5:hover &,
+  .sutrix-solutions .item5.active & {
+    background-position: -382px -180px;
+  }
+}
+
+@media @screen-md-only {
+  .block-services {
+    font-size: 12px;
+    .inner-services {
+      .title {
+        .px2em(~"font-size", 31, 12);
+      }
+      p {
+        .px2em(~"font-size", 16, 12);
+      }
+    }
+  }
+  .block-sutrix-services {
+    background-size: 100% auto;
+    .px2em(~"margin-top", 120);
+  }
+  .sutrix-consulting {
+    .item-main {
+      .px2em(~"top", -75);
+      .px2em(~"left", 82);
+    }
+    .item1 {
+      .px2em(~"top", 0);
+      .px2em(~"left", 350);
+    }
+    .item2 {
+      .px2em(~"top", 32);
+      .px2em(~"left", 488);
+    }
+    .item3 {
+      .px2em(~"top", 26);
+      .px2em(~"left", 577);
+    }
+    .item4 {
+      .px2em(~"top", 27);
+      .px2em(~"left", 698);
+    }
+    .item5 {
+      .px2em(~"top", 21);
+      .px2em(~"left", 825);
+    }
+    .item6 {
+      .px2em(~"top", 22);
+      .px2em(~"left", 833);
+    }
+    .item-plane {
+      .px2em(~"top", -57);
+      .px2em(~"left", 235);
+    }
+  }
+  .sutrix-solutions {
+    .item-main {
+      .px2em(~"top", 75);
+      .px2em(~"right", -30);
+      .item-title {
+        .px2em(~"margin-top", -66);
+      }
+    }
+    .item1 {
+      .px2em(~"top", 192);
+      .px2em(~"right", 543);
+    }
+    .item2 {
+      .px2em(~"top", 190);
+      .px2em(~"right", 435);
+    }
+    .item3 {
+      .px2em(~"top", 188);
+      .px2em(~"right", 365);
+    }
+    .item4 {
+      .px2em(~"top", 187);
+      .px2em(~"right", 258);
+    }
+    .item5 {
+      .px2em(~"top", 186);
+      .px2em(~"right", 156);
+    }
+  }
+  .deployment {
+    .px2em(~"bottom", -41);
+    .px2em(~"left", 357);
+  }
+  .maintenance {
+    .px2em(~"bottom", -41);
+    .px2em(~"right", 141);
+  }
+}
+
+@media @screen-xs-only {
+  .block-services {
+    .px2em(~"padding-top", 30);
+    .inner-services .title {
+      text-align: center;
+    }
+  }
+}
+
+//our service
+.our-services {
+  .inner {
+    .px2em(~"padding", 60px 0 70px);
+    > .title {
+      .px2em(~"font-size", 31px);
+      text-transform: capitalize;
+      font-family: @font-raleway-bold;
+      color: @gray-primary;
+      .px2em(~"margin-bottom", 10px);
+    }
+  }
+}
+.list-our-service {
+  .px2em(~"margin-top", 50px);
+  .service-info {
+    .px2em(~"margin-left", 130px);
+    .px2em(~"padding-left", 10px);
+    border-left: solid 1px #f0f0f0;
+    .service-title {
+      display: table;
+      .px2em(~"min-height", 90px);
+      .title-1 {
+        display: table-cell;
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-family: @font-raleway-semibold;
+      }
+    }
+    ul {
+      li {
+        .px2em(~"line-height", 25px);
+        font-family: @font-raleway-medium;
+      }
+    }
+  }
+  .slick-track {
+    .consulting-page & {
+      margin: auto;
+    }
+  }
+}
+@media @screen-sm-up {
+  .list-our-service {
+    .item {
+      &:nth-child(3) ~ .item {
+        display: none;
+      }
+      &:not(.slick-slide) {
+        float: left;
+        width: 33%;
+      }
+    }
+    .slick-list .item:nth-child(3) ~ .item {
+      display: block;
+    }
+  }
+}
+@media @screen-xs-only {
+  .our-services {
+    .inner {
+      > .title {
+        text-align: center;
+      }
+    }
+  }
+  .list-our-service {
+    .image {
+      float: none;
+      .px2em(~"margin", 0 auto);
+    }
+    .service-info {
+      .px2em(~"margin-left", 0);
+      .px2em(~"padding", 0 50px);
+      text-align: center;
+      border-left: 0;
+      .service-title {
+        display: inherit;
+        .px2em(~"min-height", 0);
+        .title-1 {
+          display: inherit;
+          .px2em(~"padding", 15px 0);
+        }
+      }
+    }
+    .item + .item {
+      display: none;
+    }
+    .slick-list .item + .item {
+      display: block;
+    }
+    .slick-next { right: -10px;}
+    .slick-prev { left: -10px;}
+  }
+}

@@ -1,0 +1,30 @@
+mixin link(title, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = '#'
+  a(href=href, title=title)&attributes(attributes)
+    if block
+      block
+    else
+      !=text
+mixin link-1(title, href, text)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = 'javascript:void(0)'
+  a(href=href, title=title)&attributes(attributes)
+    if block
+      block
+    !=text
+mixin link-img(title,src,href,text,alt)
+  +link(title,href,text)&attributes(attributes)
+    +img(src, alt)
+
+mixin link-data(title, href, text, data)
+  - if (typeof(text) === 'undefined') text = title
+  - if (typeof(href) === 'undefined') href = 'javascript:void(0)'
+  a(href=href, title=title, data-target=data)&attributes(attributes)
+    if block
+      block
+    else
+      !=text
+
+mixin input(type, name, value, id, attr)
+  input(type=type, name=name, id=id?id:name, value=value)&attributes(attr?attr:attributes)

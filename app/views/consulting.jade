@@ -1,0 +1,18 @@
+extends layouts/layout
+
+block vars
+  -title = $i18n.sutrix_consulting
+  -bodyClass = 'consulting-page green-theme'
+  -isChange = true
+  -isPage = "consulting"
+  -linkedInLink = 'https://www.linkedin.com/company/sutrix-consulting'
+
+block container
+  main
+    include blocks/slider
+    include blocks/about
+    include blocks/our-services
+    include blocks/case-study
+    //- include blocks/overview
+    include blocks/career
+    include blocks/contact

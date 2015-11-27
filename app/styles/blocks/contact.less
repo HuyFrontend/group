@@ -1,0 +1,215 @@
+.contact-block {
+  background-color: @gray-dark-1;
+  .px2em(~"padding", 50px 0 62px);
+  position: relative;
+  .grid-fluid {
+    > .title {
+      .px2em(~"font-size", 31px);
+      font-family: @font-raleway-bold;
+      color: white;
+    }
+    .social-contact {
+      .px2em(~"margin-top", 43px);
+    }
+    .contact-form {
+      position: relative;
+      width: 100%;
+      form {
+        .px2em(~"padding-bottom", 40px);
+      }
+      input, textarea {width: 100%;}
+      textarea {min-height: 190px;}
+      .send-btn {
+        float: right;
+        width: auto;
+        .px2em(~"margin-top", 10px);
+      }
+    }
+    .contact-info {
+      color: white;
+      address {
+        font-style: normal;
+        .px2em(~"margin-top", 10px);
+        .px2em(~"line-height", 20px);
+        span {text-transform: uppercase;}
+        .title {font-family: @font-raleway-bold;}
+        .country {font-family: @font-raleway-semibold;}
+      }
+      div:first-child {
+        address {margin-top: 0;}
+      }
+    }
+    .group-link-contact {
+      > a {
+        margin-left: 15px;
+        &:first-child {margin-left: 0;}
+        .no-touch &:hover {transform: scale(1.2, 1.2);}
+      }
+    }
+  }
+}
+
+.block-locations {
+  .px2em(~"font-size", 15px);
+  .px2em(~"margin-bottom", 55px);
+  color: white;
+  position: relative;
+  .info {
+    .px2em(~"padding-top", 27px);
+    p {
+      line-height: 1.6;
+      .px2em(~"padding-top", 30px);
+    }
+  }
+  .map {
+    display: inline-block;
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+    .pin-paris {
+      .pos-pin(21%, 49%);
+      z-index: 3;
+    }
+    .pin-scandinavia {
+      .pos-pin(17%,52.5%);
+      z-index: 2;
+    }
+    .pin-mauritius {
+      .pos-pin(62.5%,64%);
+    }
+    .pin-vietnam {
+      .pos-pin(47.5%,76%);
+    }
+    .pin-hongkong {
+      .pos-pin(31.5%, 81.8%);
+    }
+    .pin-japan {
+      .pos-pin(28%, 87%);
+    }
+  }
+}
+@media @screen-xs-only {
+  .group-link-contact {text-align: center;}
+  .contact-block .grid-fluid > .title {text-align: center;}
+  .block-locations {
+    .px2em(~"margin-bottom",27px);
+    .info {
+      text-align: left;
+      p {
+        .px2em(~"padding-top", 20px);
+      }
+    }
+    .map {
+      display: block;
+      .px2em(~"margin", 0 -15px);
+      .pin-scandinavia {
+        .pos-pin(18%, 52%);
+       }
+       .pin-paris {
+        .pos-pin(21%, 48%);
+       }
+       .pin-hongkong {
+        .pos-pin(33%, 81%);
+       }
+       .pin-vietnam {
+        .pos-pin(48.5%, 76%);
+       }
+      .pin-mauritius {
+        .pos-pin(63.5%,64%);
+      }
+    }
+  }
+  .link-locate {
+    img {
+      .size(auto, 100%);
+    }
+    .size(16px,20px);
+  }
+  .link-locate.pin-hongkong {
+    .size(18px, 24px);
+  }
+  .contact-block {
+    .px2em(~"padding-bottom", 40px);
+    .grid-fluid {
+      .social-contact {
+        .px2em(~"margin-top", 20px);
+      }
+      .contact-form {
+        form {
+          text-align: center;
+        }
+        .send-btn {
+          .px2em(~"margin-top", 20px);
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+@media @screen-sm-only {
+  .icon-fb {.size(23px, 34px);}
+  .icon-twitter-1 {.size(30px, 34px);}
+  .icon-linkedin {.size(36px, 34px);}
+  .block-locations {
+    text-align: center;
+  }
+  .contact-block {
+    .grid-fluid {
+      .social-contact {
+        .px2em(~"margin-top", 90px);
+      }
+    }
+  }
+}
+@media @screen-md-down {
+  .contact-block {
+    .contact-info {
+      .col-sm-6 {.px2em(~"margin-bottom", 20px);}
+    }
+  }
+}
+
+
+@media @screen-sm-down {
+ .contact-block {
+   .grid-fluid {
+    > .title {
+        .px2em(~"margin-bottom", 15px);
+      }
+    }
+    .block-locations {
+      .info {
+        padding-top: 0;
+        p {
+          .px2em(~"padding-top", 10px);
+        }
+      }
+    }
+  }
+}
+@media @screen-lg-up {
+  .contact-block {
+    .block-locations {
+      .map {
+        .pin-mauritius {
+          left: 63%;
+        }
+        .pin-vietnam {
+          left: 74.5%;
+        }
+        .pin-hongkong {
+          left: 79%;
+        }
+        .pin-japan {
+          top: 27.5%;
+          left: 84.5%;
+        }
+        .pin-scandinavia {
+          left: 51.5%;
+        }
+      }
+    }
+ }
+}

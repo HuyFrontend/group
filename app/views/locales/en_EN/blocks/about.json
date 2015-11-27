@@ -1,0 +1,49 @@
+ "about": {
+    "introduce": {
+      "title": "About",
+      "text_default": "&nbsp;Sutrix group",
+      "text_bold": "Sutrix Group offers on-site digital consultancy and digital production services globally. Our strength is the end-to-end capability to design &amp; develop global technology platforms and provide ongoing support &amp; maintenance services.",
+      "text1": "As of 2015, Sutrix Group has over 350 staff in 5 countries to service our worldwide clients.",
+      "text2": "Sutrix Group has two subsidiaries:",
+      "text_green" :"Sutrix Consulting:&nbsp;",
+      "text_orange" :"Sutrix Solutions:&nbsp;",
+      "featured_text1" :"Provides on-site consultants for application specifications and designing complex digital technology platforms.",
+      "featured_text2" :"Provides web &amp; mobile development with ongoing support &amp; maintenance.",
+      "link_download" : "Download Sutrix presentation",
+      "alt_map" : "Sutrix map"
+    },
+    "consulting": {
+      "title": "About&nbsp;",
+      "text_bold": "Sutrix Consulting currently has 2 offices in Copenhagen and Paris.We provide technology strategy consulting for multinationals who requires scalable, maintainable, global digital systems. Our consultant will work with your team to gather requirements and design optimized digital solutions for maximum impact &amp; ROI.",
+      "text_green": "Sutrix Consulting",
+      "text1": "As companies now require global apps optimized to work across devices and regions, our consultant will tailor design your application’s UX with the appropriate front-end and back-end frameworks for your business needs.",
+      "text2": "We can also provide on-site consulting, training and development as needed."
+      },
+      "solutions": {
+        "title": "About&nbsp;",
+        "text_orange": "Sutrix Solutions",
+        "text_bold": "Sutrix Solutions is located in Ho Chi Minh City and Mauritius. We build web &amp; mobile apps for the largest global brands in the Automotive, Tire, Banking, Insurance, Hospitality and Media industry.",
+        "text1": "Sutrix Solutions have long term partnerships with top tier Digital Agencies and System Integrators in the US, France, Denmark, Australia, Japan &amp; Singapore. Our multinational management team with an experienced production team and a proven software development process ensures on-time delivery with highest possible quality and within budget.",
+        "text2": "We develop CMS, E-Commerce, Intranet, Mobile Apps, Social Media. We also test web &amp; mobile apps to ensure it works seamlessly cross-platform on desktops and mobile devices."
+      },
+    "brand": {
+      "consulting": {
+        "title": "Sutrix Consulting",
+        "item1": "Pre-sales Support",
+        "item2": "Requirements Analysis",
+        "item3": "Specifications/Tech Design",
+        "item4": "Technical Support",
+        "item5": "Training",
+        "link_discover": "More Details"
+      },
+      "solution": {
+        "title": "Sutrix Solutions",
+        "item1": "Web Development",
+        "item2": "Mobile Development",
+        "item3": "Testing",
+        "item4": "Maintenance",
+        "item5": "Call Center/Support",
+        "link_discover": "More Details"
+      }
+    }
+  },

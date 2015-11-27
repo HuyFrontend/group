@@ -1,0 +1,26 @@
+  "management": {
+    "leader1": {
+      "alt": "david pugliesi",
+      "name": "david pugliesi",
+      "position": "President",
+      "desc": "David has over 20 years of experience in IT and brings his French business and management know-how to ensure the group has the right strategies and the resources are in place to execute and deliver."
+    },
+    "leader2": {
+      "alt": "Quan Tran",
+      "name": "Quan Tran",
+      "position": "Vice President",
+      "desc": "Quan has over 20 years of experience in IT having worked for IBM and Canon in the US. He oversees the group partnerships, systems and processes so that the team has the tools to make great deliveries."
+    },
+    "leader3": {
+      "alt": "Christophe Lam",
+      "name": "Christophe Lam",
+      "position": "business development director",
+      "desc": "Christophe has over 10 years experience in International Business Development, Account Management, Consultative sales in France and Vietnam. He oversees the group new business development and also grow the existing business accounts."
+    },
+    "leader4": {
+      "alt": "Khang Phan",
+      "name": "Khang Phan",
+      "position": "Operations Director",
+      "desc": "Khang oversees all productions inside Sutrix and ensures the company’s operations, processes and policies are executing effectively in support of our vision and mission. Khang has been with the group since 2004 working up through the ranks to his current role as Operations Director."
+    }
+  },

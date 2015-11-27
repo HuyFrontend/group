@@ -1,0 +1,4 @@
+mixin img(src, alt)
+  - if (typeof(src) === 'undefined') href = 'images/transparent.png'
+  - if (typeof(alt) === 'undefined') alt = 'Sutrix Group'
+  img(src="#{src}", alt="#{alt}")&attributes(attributes)

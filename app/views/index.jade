@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = $i18n.sutrix_group
+  -bodyClass = 'home'
+  -linkedInLink = 'https://www.linkedin.com/company/sutrix-group'
+
+block container
+  main
+    include blocks/slider
+    include blocks/about
+    include blocks/services
+    include blocks/management
+    include blocks/contact

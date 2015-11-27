@@ -1,0 +1,10 @@
+mixin address(item)
+  address
+    span.title!=item.name
+      |  |&nbsp;
+    span.country!=item.country
+    p.address!=item.address1
+      br
+      !=item.address2
+    if (typeof(item.title) !== 'undefined')
+      +link(item.title, 'tel:' + item.title, item.text).phone

@@ -1,0 +1,237 @@
+// Form
+.form-1 {
+  .clearfix();
+  .form-group {
+    position: relative;
+    .px2em(~"margin-top", 10px);
+    label {
+      position: absolute;
+      top: 50%;
+      .px2em(~"left", 15px);
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: inherit;
+      span {font-size: 1.4em;}
+    }
+    input, textarea {
+      .px2em(~"padding", 17.7px 15px);
+      &:focus {box-shadow: 0 0 5px @yellow-primary;}
+    }
+    input {
+      font-size: 1em;
+      .px2em(~"height", 52px);
+    }
+    .error-message {
+      position: absolute;
+      left: 0;
+      .px2em(~"top", 52px);
+      z-index: 2;
+      background-color: @yellow-primary;
+      .px2em(~"padding", 10px);
+      .px2em(~"line-height", 18px);
+    }
+    .input-group {
+      position: relative;
+      .error-message {top: 36px;}
+    }
+    &.message {
+      > label {
+        .px2em(~"top", 25px);
+        .px2em(~"left", 15px);
+      }
+    }
+    &.capcha {
+      .field-capcha {
+        // .px2em(~"width", 162px);
+        .px2em(~"width", 183px);
+        position: absolute;
+        z-index: 1;
+        img {width: 100%;}
+      }
+      .field-security {
+        position: relative;
+        // .px2em(~"margin-left", 169px);
+        .px2em(~"margin-left", 190px);
+      }
+    }
+    &:first-child {margin-top: 0;}
+  }
+}
+.resume-form {
+  .form-group {
+    input, textarea {
+      width: 100%;
+      .px2em(~"padding", 9px 10px);
+      color: black;
+    }
+    .upload {
+      .browse {
+        position: absolute;
+        right: 0;
+        font-family: @font-raleway-bold;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.no-touch {
+  .back-btn span {
+    &:hover {
+      transition: all .2s;
+      background-position: 10px 50%;
+    }
+  }
+  .resume-form .form-group {
+    .upload {
+      &:hover {
+        .browse {
+          background-color: @bg-btn;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media @screen-xs-only {
+  .form-1 {
+    .form-group {
+      input, textarea {
+        .px2em(~"padding", 10px);
+      }
+      input {.px2em(~"height", 40px);}
+      label {
+        .px2em(~"left", 10px);
+      }
+      &.message {
+        label {
+          .px2em(~"left", 10px);
+        }
+      }
+      &.capcha {
+        .field-capcha {
+          .px2em(~"width", 143px);
+        }
+        .field-security {
+          .px2em(~"margin-left", 150px);
+        }
+      }
+      .error-message {
+        .px2em(~"top", 40px);
+      }
+    }
+  }
+  .resume-form {
+    .form-group {
+      label {
+        color: black;
+        .px2em(~"font-size", 13px);
+      }
+      textarea {min-height: 190px;}
+      .upload {
+        input[type="file"] {
+          position: absolute;
+          opacity: 0;
+          z-index: 1;
+        }
+        input[type="text"] {.px2em(~"padding-right", 80px);}
+        .browse {
+          .px2em(~"padding", 13px);
+        }
+      }
+      &.comment {
+        > label {
+          .px2em(~"top", 18px);
+        }
+      }
+      &.capcha {
+        label {
+          position: inherit;
+          left: 0;
+          display: block;
+          .px2em(~"margin-top", 20px);
+        }
+      }
+      &.group-btn {text-align: center;}
+      .input-group {
+        .error-message {top: 40px;}
+      }
+      .send-btn {
+        width: 142px;
+        span {width: 100%;}
+      }
+      .clear-btn {.px2em(~"margin-left", 2px);}
+    }
+    .break-line {.px2em(~"margin-top", 10px);}
+  }
+}
+
+//.resume-form
+@media @screen-sm-up {
+  .resume-form {
+    .px2em(~"padding-bottom", 10px);
+    .form-group {
+      .px2em(~"padding-top", 10px);
+      label {
+        display: block;
+        position: inherit;
+        left: 0;
+      }
+      input {height: 36px;}
+      textarea {.px2em(~"min-height", 117px);}
+      &:first-child {padding-top: 0;}
+      .upload {
+        position: relative;
+        cursor: pointer;
+        input[type="file"], .browse {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+        }
+        input[type="file"] {
+          left: 0;
+          z-index: 1;
+          opacity: 0;
+          cursor: pointer;
+        }
+        input[type="text"] {.px2em(~"padding-right", 100px);}
+        .browse {
+          .px2em(~"line-height", 38px);
+          .px2em(~"padding", 0 15px);
+        }
+      }
+      &.capcha {
+        .field-capcha {.px2em(~"width", 126px);}
+        .field-security {.px2em(~"margin-left", 132px);}
+      }
+      .send-btn {
+        .px2em(~"margin-top", 18px);
+        span {
+          .px2em(~"padding", 7.5px 20px);
+        }
+      }
+      .clear-btn {.px2em(~"margin-left", 10px);}
+    }
+  }
+}
+@media @screen-sm-only {
+  .resume-form {
+    .form-group {
+      input {height: 30px;}
+      textarea {.px2em(~"min-height", 95px);}
+      .send-btn {.px2em(~"width", 71px);}
+      .error-message {.px2em(~"top", 41px);}
+      .input-group {
+        .error-message {
+          .px2em(~"font-size", 12px);
+          top: 30px;
+        }
+      }
+      &.capcha {
+        .field-capcha {.px2em(~"width", 132px);}
+        .field-security {.px2em(~"margin-left", 137px);}
+      }
+    }
+  }
+}

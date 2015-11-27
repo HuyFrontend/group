@@ -1,0 +1,83 @@
+// Typography
+@ratio: .8;
+@font-raleway-bold: 'RalewayBold';
+@font-raleway-medium: 'RalewayMedium';
+@font-raleway: 'RalewayRegular';
+@font-raleway-semibold: 'RalewaySemiBold';
+@font-family-sans-serif: Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base: @font-raleway, @font-family-sans-serif;
+@font-size-base: 14px;
+@font-size-base-sm: @ratio * @font-size-base;
+
+
+// Color
+@green-primary: #73c4b3;
+@orange-primary: #ea7a62;
+@yellow-primary: #efc153;
+@gray-primary: #3d3d3d;
+@gray-dark: #656565;
+@gray-dark-1: #414141;
+@gray-light: #727272;
+@gray-light-1: #dfdee0;
+@gray-1: #ccc;
+@gray-darker: #333b41;
+@white: @bgcolor;
+@white-dark: #fffefe;
+@white-dark-2: #fdfdfd;
+@green-darker: #2c414e;
+
+@color-primary: #000;
+@bgcolor: #fff;
+@bg-green: @green-primary;
+@bg-orange: @orange-primary;
+@bg-yellow: @yellow-primary;
+@bg-btn: #313131;
+@bg-dark: @gray-darker;
+@text-color: @color-primary;
+@placeholder-color: @color-primary;
+// Link
+@link-color: white;
+@link-hover-color: darken(@link-color, 15%);
+@link-active-color: white;
+@link-visited-color: white;
+@img: "../images/";
+// Grid System
+@width-container: 1400px;
+@width-grid: 1200px;
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-phone: @screen-xs-min;
+@screen-sm: 768px;
+@screen-sm-min: @screen-sm;
+@screen-tablet: @screen-sm-min;
+@screen-md: 1024px;
+@screen-md-min: @screen-md;
+@screen-desktop: @screen-md-min;
+@screen-lg: 1200px;
+@screen-lg-min: @screen-lg;
+@screen-lg-desktop: @screen-lg-min;
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@grid-columns: 12;
+@grid-gutter-width: 30px;
+@grid-float-breakpoint: @screen-sm-min;
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+@grid-tablet: (720px + @grid-gutter-width);
+@grid-sm: @grid-tablet;
+@grid-desktop: (940px + @grid-gutter-width);
+@grid-md: @grid-desktop;
+@grid-large-desktop: (1140px + @grid-gutter-width);
+@grid-lg: @grid-large-desktop;
+// Media query
+@screen: ~"only screen";
+@screen-xs-only: ~"@{screen} and (max-width: @{screen-xs-max})";
+@screen-sm-up: ~"@{screen} and (min-width: @{screen-sm-min})";
+@screen-sm-down: ~"@{screen} and (max-width: @{screen-sm-max})";
+@screen-sm-only: ~"@{screen} and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@screen-md-up: ~"@{screen} and (min-width: @{screen-md-min})";
+@screen-md-down: ~"@{screen} and (max-width: @{screen-md-max})";
+@screen-md-only: ~"@{screen} and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@screen-lg-up: ~"@{screen} and (min-width: @{screen-lg-min})";

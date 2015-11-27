@@ -1,0 +1,268 @@
+if (isPage === "consulting")
+  section#case-study.case-study
+    .grid-fluid
+      h2.title!=$i18n.case_study.main_title
+      .list-case-study(data-slide, data-type="ourCaseStudy")
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.consulting.case_study1.title
+            span!=$i18n.case_study.consulting.case_study1.date
+          p.desc!=$i18n.case_study.consulting.case_study1.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/1-phillip.png',$i18n.case_study.consulting.case_study1.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study1.list_item.item1.title,
+                content: $i18n.case_study.consulting.case_study1.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study1.list_item.item2.title,
+                content: $i18n.case_study.consulting.case_study1.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study1.list_item.item3.title,
+                content: $i18n.case_study.consulting.case_study1.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study1.list_item.item4.title,
+                content: $i18n.case_study.consulting.case_study1.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.consulting.case_study2.title
+            span!=$i18n.case_study.consulting.case_study2.date
+          p.desc!=$i18n.case_study.consulting.case_study2.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/2-French.png',$i18n.case_study.consulting.case_study2.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study2.list_item.item1.title,
+                content: $i18n.case_study.consulting.case_study2.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study2.list_item.item2.title,
+                content: $i18n.case_study.consulting.case_study2.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study2.list_item.item3.title,
+                content: $i18n.case_study.consulting.case_study2.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study2.list_item.item4.title,
+                content: $i18n.case_study.consulting.case_study2.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.consulting.case_study3.title
+            span!=$i18n.case_study.consulting.case_study3.date
+          p.desc!=$i18n.case_study.consulting.case_study3.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/3-Menu-card.png',$i18n.case_study.consulting.case_study3.title)
+            .col-sm-6.col-right
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study3.list_item.item1.title,
+                content: $i18n.case_study.consulting.case_study3.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study3.list_item.item2.title,
+                content: $i18n.case_study.consulting.case_study3.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study3.list_item.item3.title,
+                content: $i18n.case_study.consulting.case_study3.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.consulting.case_study3.list_item.item4.title,
+                content: $i18n.case_study.consulting.case_study3.list_item.item4.content
+              })
+      //- .link-view
+      //-   +link($i18n.case_study.link_view).btn.btn-black
+else
+  section#case-study.case-study
+    .grid-fluid
+      h2.title!=$i18n.case_study.main_title
+      .list-case-study(data-slide, data-type="ourCaseStudy")
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study1.title
+            span!=$i18n.case_study.solutions.case_study1.date
+          p.desc!=$i18n.case_study.solutions.case_study1.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/2-French.png',$i18n.case_study.solutions.case_study1.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study1.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study1.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study1.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study1.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study1.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study1.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study1.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study1.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study2.title
+            span!=$i18n.case_study.solutions.case_study2.date
+          p.desc!=$i18n.case_study.solutions.case_study2.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/3-Menu-card.png',$i18n.case_study.solutions.case_study2.title)
+            .col-sm-6.col-right
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study2.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study2.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study2.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study2.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study2.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study2.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study2.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study2.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study3.title
+            span!=$i18n.case_study.solutions.case_study3.date
+          p.desc!=$i18n.case_study.solutions.case_study3.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/1-donut-e-commerce.png',$i18n.case_study.solutions.case_study3.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study3.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study3.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study3.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study3.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study3.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study3.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study3.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study3.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study4.title
+            span!=$i18n.case_study.solutions.case_study4.date
+          p.desc!=$i18n.case_study.solutions.case_study4.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/2-airline-website.png',$i18n.case_study.solutions.case_study4.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study4.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study4.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study4.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study4.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study4.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study4.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study4.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study4.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study5.title
+            span!=$i18n.case_study.solutions.case_study5.date
+          p.desc!=$i18n.case_study.solutions.case_study5.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/3-e-commerce-japan.png',$i18n.case_study.solutions.case_study5.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study5.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study5.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study5.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study5.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study5.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study5.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study5.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study5.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study6.title
+            span!=$i18n.case_study.solutions.case_study6.date
+          p.desc!=$i18n.case_study.solutions.case_study6.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/4-car-app.png',$i18n.case_study.solutions.case_study6.title)
+            .col-sm-6.col-right(data-toggle="ScrollMenu")
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study6.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study6.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study6.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study6.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study6.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study6.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study6.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study6.list_item.item4.content
+              })
+        .item-case-study
+          h3.sub-title!=$i18n.case_study.solutions.case_study7.title
+            span!=$i18n.case_study.solutions.case_study7.date
+          p.desc!=$i18n.case_study.solutions.case_study7.info
+          .line-separator
+          .row
+            .col-sm-6.col-images
+              +img('../images/upload/5-Glaxo.png',$i18n.case_study.solutions.case_study7.title)
+            .col-sm-6.col-right
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study7.list_item.item1.title,
+                content: $i18n.case_study.solutions.case_study7.list_item.item1.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study7.list_item.item2.title,
+                content: $i18n.case_study.solutions.case_study7.list_item.item2.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study7.list_item.item3.title,
+                content: $i18n.case_study.solutions.case_study7.list_item.item3.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study7.list_item.item4.title,
+                content: $i18n.case_study.solutions.case_study7.list_item.item4.content
+              })
+              +item-case-study({
+                title: $i18n.case_study.solutions.case_study7.list_item.item5.title,
+                content: $i18n.case_study.solutions.case_study7.list_item.item5.content
+              })
+      //- .link-view
+      //-   +link($i18n.case_study.link_view).btn.btn-black

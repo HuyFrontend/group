@@ -1,0 +1,44 @@
+// Variable
+@import "variable.less";
+// Mixin
+@import "mixin.less";
+// Variables
+@font-family-default: Arial, Helvetica, sans-serif;
+//
+body {
+  font-family: @font-family-default;
+  line-height: 1.3;
+}
+.about .main-box > .content,
+.slider-block .slider-for .item .info,
+.office .list-offices .item .info-overlay .phone {
+  font-family: @font-family-default;
+}
+.about .main-box > .content,
+.block-services .inner-services p {
+  font-size: 18px;
+}
+.block-brand ul li {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.slider-block .slider-for .item .info {
+  font-size: 23px;
+  font-weight: bold;
+}
+.office .list-offices .item .info-overlay .address {
+  font-weight: bold;
+}
+
+@media @screen-sm-only {
+  .slider-block .slider-for .item .info {
+    font-size: 18px;
+  }
+}
+
+@media @screen-xs-only {
+  .slider-block .slider-for .item .info {
+    font-size: 16px;
+  }
+}

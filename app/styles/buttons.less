@@ -1,0 +1,140 @@
+//btn
+.btn span, .btn{
+  color: white;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  .unselectable();
+}
+.btn:focus span {
+  box-shadow: inset 0 0 5px rgba(221,221,221,.5);
+}
+
+.shadow-btn {
+  &:after, &:before {
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 40%;
+    top: 80%;
+    background-color: @gray-primary;
+    box-shadow: 0 3px 10px 3px @gray-primary;
+    transform: rotate(-6deg);
+    z-index: -1;
+  }
+  &:after {
+    transform: rotate(6deg);
+    right: 10px;
+    left: auto;
+  }
+}
+.btn-black span {
+  .px2em(~"padding", 12px 40px 12px 20px);
+  background: @bg-btn url('../images/icon-arrow.png') no-repeat 91% 50%;
+  background-size: 11px 18px;
+  .border-radius(3px);
+  transition: background .2s ease-in-out;
+  .shadow-btn();
+  .no-touch &:hover{
+    color: white;
+    background-position: 95% 50%;
+  }
+}
+.btn-border {
+  .px2em(~"font-size", 23px);
+  .px2em(~"padding", 12px 25px, 23px);
+  border: 3px solid white;
+  transition: all .2s ease-in-out;
+  .no-touch &:hover, &:focus {
+    background-color: white;
+    color: @gray-primary;
+  }
+}
+.btn-color {
+  .px2em(~"font-size", 16px);
+  .px2em(~"padding", 0);
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+  transition: all .2s ease-in-out;
+  .no-touch &:hover span, &:focus span {
+    background-color: @bg-btn;
+    color: white;
+  }
+  span {
+    .shadow-btn();
+    .px2em(~"padding", 10px 45px, 16px);
+    background-color: @yellow-primary;
+    .border-radius(3px);
+    &:before, &:after {
+      box-shadow: 0 3px 10px 3px rgba(0,0,0,.54);
+    }
+  }
+}
+
+.btn-top {
+  .size(43px,75px);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: @yellow-primary;
+  background: url('@{img}icon-top-yellow.png') no-repeat bottom center;
+  position: absolute;
+  right: 25px;
+  bottom: 35px;
+  &:before {
+    content: "";
+    .size(100%,4px);
+    background-color: @yellow-primary;
+    position: absolute;
+    top: 14px;
+    left: 0;
+  }
+  &:hover {
+    .no-touch & {
+      color: @yellow-primary;
+    }
+  }
+  .green-theme & {
+    color: @green-primary;
+    background-image: url('@{img}icon-top-green.png');
+    &:before {
+      background-color: @green-primary;
+    }
+    &:hover {
+      .no-touch & {
+        color: @green-primary;
+      }
+    }
+  }
+  .orange-theme & {
+    color: @orange-primary;
+    background-image: url('@{img}icon-top-orange.png');
+    &:before {
+      background-color: @orange-primary;
+    }
+    &:hover {
+      .no-touch & {
+        color: @orange-primary;
+      }
+    }
+  }
+}
+
+@media @screen-xs-only {
+  .btn-top {
+    .size(40px,60px);
+    bottom: 10px;
+    right: 10px;
+    background-size: 80%;
+    &:before {
+      height: 2px;
+      top: 15px;
+    }
+  }
+}

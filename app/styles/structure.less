@@ -1,0 +1,29 @@
+// Structure
+.container {
+  max-width: @width-container;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  .clearfix();
+  // position: relative;
+  // z-index: 99;
+}
+
+main {
+  .px2em(~"padding-top", 80);
+  .green-theme &,
+  .orange-theme & {
+    .px2em(~"padding-top", 103);
+  }
+}
+
+
+@media @screen-xs-only {
+  main {
+    .px2em(~"padding-top", 71);
+    .green-theme &,
+    .orange-theme & {
+      .px2em(~"padding-top", 84);
+    }
+  }
+}
