@@ -18,30 +18,30 @@
   TooltipElement.prototype = {
 
     init : function() {
-      // var self = this, elm = self.element, opt = self.options;
-      // this.actions();
+      var self = this, elm = self.element, opt = self.options;
+      this.actions();
 
-      // function outSizeTooltip (e) {
-      //   if(!document.getElementById(opt.idTooltip)) {
-      //     return;
-      //   }
-      //   self.bodyClickOffToolTip(e);
-      // }
-      // if(!window.isMobileTablet) {
-      //   elm.removeEventListenerOrDetachEventMultiEvent(self.tooltip, ['mouseenter']);
-      //   elm.addEventListenerOrAttachEventMultiEvent(self.tooltip, ['mouseenter']);
+      function outSizeTooltip (e) {
+        if(!document.getElementById(opt.idTooltip)) {
+          return;
+        }
+        self.bodyClickOffToolTip(e);
+      }
+      if(!window.isMobileTablet) {
+        elm.removeEventListenerOrDetachEventMultiEvent(self.tooltip, ['mouseenter']);
+        elm.addEventListenerOrAttachEventMultiEvent(self.tooltip, ['mouseenter']);
 
-      //   elm.removeEventListenerOrDetachEventMultiEvent(self.offTooltip, ['mouseleave']);
-      //   elm.addEventListenerOrAttachEventMultiEvent(self.offTooltip, ['mouseleave']);
-      // }
-      // else {
-      //   elm.removeEventListenerOrDetachEventMultiEvent(self.tooltip, [/*'click',*/ 'touchstart']);
-      //   elm.addEventListenerOrAttachEventMultiEvent(self.tooltip, [/*'click',*/ 'touchstart']);
+        elm.removeEventListenerOrDetachEventMultiEvent(self.offTooltip, ['mouseleave']);
+        elm.addEventListenerOrAttachEventMultiEvent(self.offTooltip, ['mouseleave']);
+      }
+      else {
+        elm.removeEventListenerOrDetachEventMultiEvent(self.tooltip, [/*'click',*/ 'touchstart']);
+        elm.addEventListenerOrAttachEventMultiEvent(self.tooltip, [/*'click',*/ 'touchstart']);
 
 
-      //   document.body.removeEventListenerOrDetachEventMultiEvent(outSizeTooltip, [/*'click',*/ 'touchstart']);
-      //   document.body.addEventListenerOrAttachEventMultiEvent(outSizeTooltip, [/*'click',*/ 'touchstart']);
-      // }
+        document.body.removeEventListenerOrDetachEventMultiEvent(outSizeTooltip, [/*'click',*/ 'touchstart']);
+        document.body.addEventListenerOrAttachEventMultiEvent(outSizeTooltip, [/*'click',*/ 'touchstart']);
+      }
 
     },
     actions : function() {
@@ -61,7 +61,7 @@
           var parent = elm.parentNode;
           if(parent.querySelector('#' + opt.idTooltip)) {
             // parent.querySelector('#' + opt.idTooltip).removeClass(opt.classHide);
-            parent.querySelector('#' + opt.idTooltip).fadeInFadeOut('in', 200);
+            parent.querySelector('#' + opt.idTooltip).fadeInFadeOut('in', 300);
           }
           else {
             if(tooltip.classList) {
@@ -112,7 +112,7 @@
               tooltip.style.left = -distanceLeft + 'px';
             }
             tooltip.style.top = top + 'px';
-            tooltip.fadeInFadeOut('in', 200);
+            tooltip.fadeInFadeOut('in', 300);
             tooltip.parentNode.addClass(opt.classActive);
           }
         }

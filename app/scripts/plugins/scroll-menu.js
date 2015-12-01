@@ -57,7 +57,7 @@
         if(elementScrollTo && elementScrollTo.length) {
           setTimeout(function (){
             $('html, body').stop().animate({
-              scrollTop: elementScrollTo.offset().top - headerHeight + 8
+              scrollTop: elementScrollTo.offset().top - headerHeight + 9
             }, 500 );
             // $(window).off('scroll');
           },300);

@@ -3,7 +3,7 @@
       "number1": "5",
       "text1": "offices worldwide",
       "number2": "300+",
-      "text2": "employees",
+      "text2": "Employés",
       "number3": "1000+",
       "text3": "happy clients",
       "number4": "100+",
@@ -35,33 +35,33 @@
       "phone": ""
     },
     "employee1": {
-      "title": "Project management",
-      "address": "With solid methodology knowledge, our Project Managers will work closely with you to ensure your project is delivered according to spec, on time & within budget.",
+      "title": "Gestion de projet",
+      "address": "Avec leurs solides aptitudes méthodologiques nos chefs de projets travaillerons en contact permanent avec vous. Ils s’assureront que vos projets soient livrés en adéquation avec vos demandes, votre calendrier et votre budget.",
       "phone": ""
     },
     "employee2": {
-      "title": "Back-end development",
-      "address": "Our back-end team who is expert programming skills in PHP, .Net and Java builds and maintenance the core functional logic and operations of your web & mobile apps.",
+      "title": "Dévelopement backend",
+      "address": "Notre équipe de développeurs back-end experte en programmation PHP, .Net et Java construira et assurera le suivi de vos applications  mobiles et web.",
       "phone": ""
     },
     "employee3": {
-      "title": "Quality control",
-      "address": "Our QC team gets involved early in the project to prepare then handle security, performance; stress tests as well as automation testing.",
+      "title": "Contrôle qualité",
+      "address": "Dès le commencement de votre projet notre équipe de contrôle qualité et présente pour assurer la sécurité et la performance de vos applications. ( à vérifier )",
       "phone": ""
     },
     "employee4": {
-      "title": "Creative",
-      "address": "Our creative team can adapt your master design to make additional designs.We can also create your master design based on your design brief.",
+      "title": "Création",
+      "address": "Nos créateurs pourront adapter vos principaux design pour en développer de nouveaux. Ils seront aussi a votre service pour créer un design à partir de vote besoin et/ou de votre brief.",
       "phone": ""
     },
     "employee5": {
-      "title": "Front-end development",
-      "address": "Adept at HTML, JS, CSS and familiar with frameworks like Bootstrap,Backbone, AngularJS, and EmberJS, our Front end developers are responsible for a website’s user-facing code and the architecture of its immersive user experiences...",
+      "title": "Développement front-end",
+      "address": "Nos développeurs front-end seront responsables de la création de votre interface et de l’architecture pour une expérience utilisateur immersive. Pour cela ils utiliseront des technologies comme HTML, JS, CSS mais aussi bootstrap, backbone, angularJS et EmberJS.",
       "phone": ""
     },
     "employee6": {
-      "title": "Mobile",
-      "address": "Our Mobile developers write native code for iOS, Android &amp; Window Phone. We can develop for both phone and tablets and also develop hybrid mobile app using PhoneGap that will work on multiple mobile platforms.",
+      "title": "Développement mobile",
+      "address": "Nos développeurs mobile seront responsable du codage dans le langage de votre choix (IOS, Android et Windows phone) pour téléphones et tablettes. Ils ont aussi a leur disposition des outils hybride comme phonegap qui vous permettrons une utilisation multiplateforme optimale.",
       "phone": ""
     },
     "client1": {

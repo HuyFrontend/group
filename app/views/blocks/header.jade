@@ -20,7 +20,7 @@ header.header
       .language.left.visible-md-up
         +link($i18n.header.lang_fr, '/fr_FR')(class=activeFR)
         +link($i18n.header.lang_en, '/en_EN')(class=activeEN)
-        +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
+        //- +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
       .top-menu.right #{$i18n.header.menu}
         button(type= 'button', title= $i18n.header.menu, data-toggle="ToggleMenu", data-target="menu-wrapper").btn-menu
           span.line.line-top
@@ -28,6 +28,7 @@ header.header
           span.line.line-bottom
     #menu-wrapper.menu-wrapper(data-toggle="SetSizeElement")
       if (isPage=="consulting")
+        span.are-here!=$i18n.header.menu5
         +nav-data([{title: $i18n.header.menu1, data: 'about'},
                  {title: $i18n.header.menu2, data: 'services'},
                  {title: $i18n.header.menu8, data: 'case-study'},
@@ -37,6 +38,7 @@ header.header
           li: +link($i18n.header.menu7, 'index.html')
           li: +link($i18n.header.menu6, 'solutions.html')
       else if (isPage=="solutions")
+        span.are-here!=$i18n.header.menu6
         +nav-data([{title: $i18n.header.menu1, data: 'about'},
                  {title: $i18n.header.menu2, data: 'services'},
                  {title: $i18n.header.menu8, data: 'case-study'},
@@ -46,6 +48,7 @@ header.header
           li: +link($i18n.header.menu7, 'index.html')
           li: +link($i18n.header.menu5, 'consulting.html')
       else
+        span.are-here!=$i18n.header.menu7
         +nav-data([{title: $i18n.header.menu1, data: 'about'},
                  {title: $i18n.header.menu2, data: 'services'},
                  {title: $i18n.header.menu3, data: 'management'},
@@ -60,7 +63,7 @@ header.header
       .language.visible-xs.visible-sm
         +link($i18n.header.lang_fr, '/fr_FR')(class=activeFR)
         +link($i18n.header.lang_en, '/en_EN')(class=activeEN)
-        +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
+        //- +link($i18n.header.lang_jp, '/jp_JP')(class=activeJP)
     .block-talk-us.visible-sm-up(data-toggle="ScrollMenu")
       +link-data($i18n.header.talkus,'javascript:void(0)',$i18n.header.talkus,'contact').talk-us
         span.icon.icon-question

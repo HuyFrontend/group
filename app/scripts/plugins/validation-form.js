@@ -29,25 +29,55 @@
             opt = that.options;
         var body = elm.closest('body');
 
-        that.createMethod();
-        that.validateForm();
+        opt.validType = opt.validType ? opt.validType : elm.attr('data-type-valid');
+        opt.typeRemoveHolder = elm.attr('data-remove-holder') ? elm.attr('data-remove-holder') : opt.typeRemoveHolder;
 
-        body.off('focus.formField', '[required="required"]').on('focus.formField', '[required="required"]', function () {
-          var me = $(this);
-          me.prev().addClass(opt.classHidden);
-        });
-        body.off('blur.formField', '[required="required"]').on('blur.formField', '[required="required"]', function () {
-          var me = $(this);
-          if(!me.val()) {
-            me.prev().removeClass(opt.classHidden);
+        if(opt.validType && ( opt.validType === 'contact-form')) {
+          that.validateForm();
+        }
+        if(opt.validType && (opt.validType === 'apply-form') ) {
+          that.validateFormApply();
+        }
+        that.createMethod();
+
+        elm.find('#' + opt.idInputFile).on('change', function () {
+          if(this.files.length) {
+            elm.find('#' + opt.idInputText).val(this.files[0].name);
+          }
+          else {
+            elm.find('#' + opt.idInputText).val('');
           }
         });
+
+        body.off('focus.formField', '[required="required"], #comment, #message').on('focus.formField', '[required="required"], #comment, #message', function () {
+          var me = $(this);
+          if(( me.closest('[' + opt.dataRemoveHolder+ ']') && me.closest('[' + opt.dataRemoveHolder+ ']').attr(opt.dataRemoveHolder) === 'all' ) || document.documentElement.clientWidth < 768) {
+            me.prev().addClass(opt.classHidden);
+            me.closest('.' + opt.classFormGroup).find('[' + opt.dataHolder + ']').addClass(opt.classHidden);
+          }
+        });
+
+        body.off('blur.formField', '[required="required"], #comment, #message').on('blur.formField', '[required="required"], #comment, #message', function () {
+          var me = $(this);
+          if(!me.val()) {
+            if(( me.closest('[' + opt.dataRemoveHolder+ ']') && me.closest('[' + opt.dataRemoveHolder+ ']').attr(opt.dataRemoveHolder) === 'all' ) || document.documentElement.clientWidth < 768) {
+              me.prev().removeClass(opt.classHidden);
+              me.closest('.' + opt.classFormGroup).find('[' + opt.dataHolder + ']').removeClass(opt.classHidden);
+            }
+          }
+        });
+
         body.off('click.holderElement', '[data-holder]').on('click.holderElement', '[data-holder]', function () {
           var me = $(this);
-          me.addClass(opt.classHidden);
-          me.next().focus();
+          if(( me.closest('[' + opt.dataRemoveHolder+ ']') && me.closest('[' + opt.dataRemoveHolder+ ']').attr(opt.dataRemoveHolder) === 'all' ) || document.documentElement.clientWidth < 768) {
+            me.addClass(opt.classHidden);
+            me.next().focus();
+            me.closest('.' + opt.classFormGroup).find('input').focus();
+            me.closest('.' + opt.classFormGroup).find('textarea').focus();
+          }
         });
-        body.off('click.offPopup touchstart.offPopup', '.' + opt.elementOverlay).on('click.offPopup touchstart.offPopup', '.' + opt.elementOverlay, function (e) {
+
+        body.off('click.offPopup touchstart.offPopup', '[' + opt.dataPopup + ']').on('click.offPopup touchstart.offPopup', '[' + opt.dataPopup + ']', function (e) {
           var target = $(e.target);
           var content = target.hasClass(opt.classContentPopup) ? target : '';
           var child =  target.closest('.' + opt.classContentPopup).length ? target.closest('.' + opt.classContentPopup) : '';
@@ -55,9 +85,11 @@
             $(this).addClass(opt.classHidden);
           }
         });
-        body.off('click.offPopup touchstart.offPopup', '.' + opt.elementOverlay + ' a.close').on('click.offPopup touchstart.offPopup', '.' + opt.elementOverlay + ' a.close', function () {
-          $(this).closest('.' + opt.elementOverlay).addClass(opt.classHidden);
+
+        body.off('click.offPopup touchstart.offPopup', '[' + opt.dataPopup + ']' + ' a.close').on('click.offPopup touchstart.offPopup', '[' + opt.dataPopup + ']' + ' a.close', function () {
+          $(this).closest('[' + opt.dataPopup + ']').addClass(opt.classHidden);
         });
+
         body.off('kepress').on('keypress', 'form input', function(e) {
           var key = e.keyCode || e.which;
           if (key === 13) {
@@ -65,6 +97,7 @@
             return false;
           }
         });
+
         // check to show hide holder label
         var holder = elm.find('[data-holder]');
         if(holder) {
@@ -115,35 +148,27 @@
           form = $(form);
           var textSubmit = form.find('[type="submit"] span');
           var url = form.attr('action');
-          var data = {
-            'action': 'ajax_contact_form_process',
-            'data' : form.serialize(),
-            'ic_form_token' : form.find('[name="ic_form_token"]').val()
-          };
+          var serialize = $(form).serialize();
 
           form.find('[required="required"]').attr('disabled', true);
           form.find('[type="submit"]').attr('disabled', true);
           textSubmit.html(L10n[lang].text.sending);
-
           //real ajax
           $.ajax({
               method: 'post',
               dataType: 'json',
               url: url,
-              data: data,
+              data: serialize,
               success: function (res) {
-                // res: {error: 0/1, code: 1/2..8}
-                var isError = (res.error && res.error === 1) ? true : false;
                 var message;
-                if(isError) {
-                  var errorCode = (res.code) ? res.code : 0;
-                  message = L10n[lang].ajax.contact.code[parseInt(errorCode) - 1];
-                }
-                var popup =  $('.' + opt.classContentPopup);
+                var errorCode = (res.code) ? res.code : 0;
+                var popup =  $('[' + opt.dataPopup + ']');
+                message = L10n[lang].ajax.contact.code[parseInt(errorCode) - 1];
                 elm.removeClass(opt.classHidden);
 
                 popup.find('p').html(message);
                 popup.parent().removeClass(opt.classHidden);
+                popup.removeClass(opt.classHidden);
 
                 form.find('[required="required"]').removeAttr('disabled');
                 form.find('[type="submit"]').removeAttr('disabled');
@@ -170,9 +195,17 @@
                 firstErrorMessage = errorList[0].message,
                 thisGroup = $(firstErrorElement).closest('.' + opt.classFormGroup),
                 errorElement = thisGroup.find(opt.errorNoticeElement);
-
-            errorElement.html(firstErrorMessage);
-            errorElement.removeClass(opt.classHidden);
+            if(errorElement && errorElement.length) {
+              errorElement.html(firstErrorMessage);
+              errorElement.removeClass(opt.classHidden);
+            }
+            else {
+              var errorString = '<span class="error-message hide">Please enter your first name</span>';
+              $(errorString).insertAfter(firstErrorElement);
+              errorElement = thisGroup.find(opt.errorNoticeElement);
+              errorElement.html(firstErrorMessage);
+              errorElement.removeClass(opt.classHidden);
+            }
 
             setTimeout(function () {
               errorElement.addClass(opt.classHidden);
@@ -223,10 +256,10 @@
 
         var messages = {
             'username': {
-              required: L10n[lang].required.username
+              required: L10n[lang].required.firstName
             },
             'lastname': {
-              required: L10n[lang].required.lastname
+              required: L10n[lang].required.lastName
             },
             'email': {
               required: L10n[lang].required.email,
@@ -236,12 +269,23 @@
               required: L10n[lang].required.fileUpload
             },
             'security': {
-              required: L10n[lang].required.capcha
+              required: L10n[lang].required.code
             }
         };
         var ajaxSubmit = function (form, calback) {
           form = $(form);
           var textSubmit = form.find('[type="submit"] span');
+
+          var m_data = new FormData();
+              m_data.append( 'username', $('input[name=username]').val());
+              m_data.append( 'lastname', $('input[name=lastname]').val());
+              m_data.append( 'email', $('input[name=email]').val());
+              m_data.append( 'comment', $('textarea[name=comment]').val());
+              m_data.append( 'action', $('input[name=action]').val());
+              m_data.append( 'ic_form_token', $('input[name=ic_form_token]').val());
+              m_data.append( 'security', $('input[name=security]').val());
+              m_data.append( 'file_attach', $('input[name=file]')[0].files[0]);
+
           form.find('[required="required"]').attr('disabled', true);
           form.find('[type="submit"]').attr('disabled', true);
           textSubmit.html(L10n[lang].text.sending);
@@ -250,24 +294,20 @@
               method: 'post',
               dataType: 'json',
               url: form.attr('action'),
-              data: {
-                'action': 'ajax_contact_form_process',
-                'data' : form.serialize(),
-                'ic_form_token' : form.find('[name="ic_form_token"]').val()
-              },
+              data: m_data,
+              processData: false,
+              contentType: false,
+              enctype: 'multipart/form-data',
               success: function (res) {
-                // res: {error: 0/1, code: 1/2..8}
-                var isError = (res.error && res.error === 1) ? true : false;
                 var message;
-                if(isError) {
-                  var errorCode = (res.code) ? res.code : 0;
-                  message = L10n[lang].ajax.contact.code[parseInt(errorCode) - 1];
-                }
-                var popup =  $('.' + opt.classContentPopup);
+                var errorCode = (res.code) ? res.code : 0;
+                var popup =  $('[' + opt.dataPopup + ']');
+                message = L10n[lang].ajax.contact.code[parseInt(errorCode) - 1];
                 elm.removeClass(opt.classHidden);
 
                 popup.find('p').html(message);
                 popup.parent().removeClass(opt.classHidden);
+                popup.removeClass(opt.classHidden);
 
                 form.find('[required="required"]').removeAttr('disabled');
                 form.find('[type="submit"]').removeAttr('disabled');
@@ -295,8 +335,17 @@
                 thisGroup = $(firstErrorElement).closest('.' + opt.classFormGroup),
                 errorElement = thisGroup.find(opt.errorNoticeElement);
 
-            errorElement.html(firstErrorMessage);
-            errorElement.removeClass(opt.classHidden);
+            if(errorElement && errorElement.length) {
+              errorElement.html(firstErrorMessage);
+              errorElement.removeClass(opt.classHidden);
+            }
+            else {
+              var errorString = '<span class="error-message hide">This field is required</span>';
+              $(errorString).insertAfter(firstErrorElement);
+              errorElement = thisGroup.find(opt.errorNoticeElement);
+              errorElement.html(firstErrorMessage);
+              errorElement.removeClass(opt.classHidden);
+            }
 
             setTimeout(function () {
               errorElement.addClass(opt.classHidden);
@@ -329,15 +378,26 @@
     };
 
     $.fn[pluginName].defaults = {
-      groupErrorClass: 'has-error',
-      errorClass: 'error-message',
-      errorNoticeElement: 'span.error-message',
+      classErrorGroup: 'has-error',
+      classError: 'error-message',
       classFormGroup: 'form-group',
       classHidden: 'hide',
-      dataHolder: 'data-holder',
       classLoadingIcon: 'loading',
       classContentPopup: 'message-layer',
-      elementOverlay: 'sm-overlay'
+      classReset: 'reset',
+      errorNoticeElement: 'span.error-message',
+      dataHolder: 'data-holder',
+      dataPopup: 'data-popup-valid-form',
+      dataRemoveHolder: 'data-remove-holder',
+      elementOverlay: 'sm-overlay',
+      elementLoading: '',
+      validType: '',
+      idInputText: 'upload',
+      idInputFile: 'file',
+      typeRemoveHolder: '',
+      isMobile: navigator.userAgent.match(/Android|BlackBerry|BB|iPhone|iPad|iPod|Opera Mini|IEMobile/i),
+      screenWidth: document.documentElement.clientWidth
+
     };
 
     $(function() {

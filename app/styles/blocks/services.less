@@ -52,13 +52,20 @@
 .sutrix-solutions .item-main .item-title {
   color: white;
   .px2em(~"font-size", 17);
-  .px2em(~"padding", 5 0, 17);
+  a {
+    color: white;
+    .px2em(~"padding", 5 0, 17);
+    &:hover {
+      .no-touch & {
+        color: white;
+      }
+    }
+  }
 }
 .sutrix-consulting,
 .sutrix-consulting a,
 .no-touch .sutrix-consulting a:hover {
   color: @green-primary;
-
 }
 .sutrix-solutions,
 .sutrix-solutions a,
@@ -76,6 +83,7 @@
 .maintenance .text {
   background: #222;
   text-align: center;
+  .px2em(~"padding", 5 0, 17);
 }
 .deployment {
   position: absolute;
@@ -113,24 +121,24 @@
     .px2em(~"left", 327);
   }
   .item2 {
-    .px2em(~"width", 65);
+    .px2em(~"width", 80);
     .px2em(~"top", 32);
     .px2em(~"left", 468);
   }
   .item3 {
     .px2em(~"width", 100);
-    .px2em(~"top", 28);
-    .px2em(~"left", 557);
+    .px2em(~"top", 29);
+    .px2em(~"left", 585);
   }
   .item4 {
     .px2em(~"width", 72);
-    .px2em(~"top", 29);
-    .px2em(~"left", 678);
+    .px2em(~"top", 25);
+    .px2em(~"left", 728);
   }
   .item5 {
     .px2em(~"width", 63);
-    .px2em(~"top", 24);
-    .px2em(~"left", 790);
+    .px2em(~"top", 30);
+    .px2em(~"left", 845);
   }
   .item6 {
     .px2em(~"width", 78);
@@ -163,12 +171,12 @@
   }
   .item1 {
     .px2em(~"width", 100);
-    .px2em(~"top", 185);
+    .px2em(~"top", 183);
     .px2em(~"right", 558);
   }
   .item2 {
     .px2em(~"width", 87);
-    .px2em(~"top", 183);
+    .px2em(~"top", 180);
     .px2em(~"right", 460);
   }
   .item3 {
@@ -178,12 +186,12 @@
   }
   .item4 {
     .px2em(~"width", 90);
-    .px2em(~"top", 180);
-    .px2em(~"right", 273);
+    .px2em(~"top", 183);
+    .px2em(~"right", 270);
   }
   .item5 {
     .px2em(~"width", 90);
-    .px2em(~"top", 179);
+    .px2em(~"top", 180);
     .px2em(~"right", 171);
   }
   .icon-main {
@@ -211,81 +219,80 @@
   }
 }
 .icon-market {
-  .size(27px,36px);
-  background-position: -237px -21px;
-  margin-bottom: 13px;
-  .no-touch .sutrix-consulting .item3:hover &,
-  .sutrix-consulting .item3.active & {
-    background-position: -237px -88px;
-  }
-}
-.icon-plat-form {
   .size(51px,34px);
   background-position: -313px -22px;
-  .no-touch .sutrix-consulting .item4:hover &,
-  .sutrix-consulting .item4.active & {
+  .no-touch .sutrix-consulting .item3:hover &,
+  .sutrix-consulting .item3.active & {
     background-position: -313px -89px;
   }
 }
+.icon-plat-form {
+  .size(38px);
+  background-position: -412px -18px;
+  .no-touch .sutrix-consulting .item4:hover &,
+  .sutrix-consulting .item4.active & {
+    background-position: -412px -85px;
+  }
+}
 .icon-tech {
-  .size(29px,39px);
-  background-position: -423px -17px;
+  .size(31px,32px);
+  background-position: -529px -22px;
   .no-touch .sutrix-consulting .item5:hover &,
   .sutrix-consulting .item5.active & {
-    background-position: -423px -84px;
+    background-position: -529px -89px;
   }
 }
-.icon-process {
-  .size(38px);
-  background-position: -526px -16px;
-  .no-touch .sutrix-consulting .item6:hover &,
-  .sutrix-consulting .item6.active & {
-    background-position: -526px -83px;
-  }
-}
+// .icon-process {
+//   .size(38px);
+//   background-position: -526px -16px;
+//   .no-touch .sutrix-consulting .item6:hover &,
+//   .sutrix-consulting .item6.active & {
+//     background-position: -526px -83px;
+//   }
+// }
 
 .icon-testing {
-  .size(58px,40px);
-  background-position: 0 -142px;
-  margin-bottom: 13px;
+  .size(55px,48px);
+  background-position: -1px -136px;
+  margin-bottom: 6px;
   .no-touch .sutrix-solutions .item1:hover &,
   .sutrix-solutions .item1.active & {
-    background-position: 0 -189px;
+    background-position: -1px -189px;
   }
 }
 
 .icon-development {
-  .size(40px);
-  background-position: -100px -139px;
+  .size(24px,42px);
+  background-position: -116px -134px;
   .no-touch .sutrix-solutions .item2:hover &,
   .sutrix-solutions .item2.active & {
-    background-position: -100px -186px;
+    background-position: -116px -187px;
   }
 }
 
 .icon-design {
-  .size(42px,41px);
-  background-position: -193px -136px;
+  .size(40px);
+  background-position: -193px -135px;
   .no-touch .sutrix-solutions .item3:hover &,
   .sutrix-solutions .item3.active & {
-    background-position: -193px -183px;
+    background-position: -193px -188px;
   }
 }
 .icon-spec {
-  .size(62px,42px);
-  background-position: -267px -135px;
+  .size(57px,38px);
+  background-position: -276px -135px;
   .no-touch .sutrix-solutions .item4:hover &,
   .sutrix-solutions .item4.active & {
-    background-position: -267px -182px;
+    background-position: -276px -188px;
   }
 }
 .icon-need-analysis {
-  .size(35px,41px);
-  background-position: -382px -133px;
+  .size(29px,39px);
+  background-position: -391px -134px;
   margin-bottom: 17px;
   .no-touch .sutrix-solutions .item5:hover &,
   .sutrix-solutions .item5.active & {
-    background-position: -382px -180px;
+    background-position: -391px -187px;
   }
 }
 
@@ -311,24 +318,24 @@
       .px2em(~"left", 82);
     }
     .item1 {
-      .px2em(~"top", 0);
+      .px2em(~"top", 1);
       .px2em(~"left", 350);
     }
     .item2 {
       .px2em(~"top", 32);
-      .px2em(~"left", 488);
+      .px2em(~"left", 508);
     }
     .item3 {
-      .px2em(~"top", 26);
-      .px2em(~"left", 577);
+      .px2em(~"top", 27);
+      .px2em(~"left", 615);
     }
     .item4 {
-      .px2em(~"top", 27);
-      .px2em(~"left", 698);
+      .px2em(~"top", 22);
+      .px2em(~"left", 750);
     }
     .item5 {
-      .px2em(~"top", 21);
-      .px2em(~"left", 825);
+      .px2em(~"top", 28);
+      .px2em(~"left", 875);
     }
     .item6 {
       .px2em(~"top", 22);
@@ -348,24 +355,24 @@
       }
     }
     .item1 {
-      .px2em(~"top", 192);
-      .px2em(~"right", 543);
+      .px2em(~"top", 191);
+      .px2em(~"right", 533);
     }
     .item2 {
-      .px2em(~"top", 190);
+      .px2em(~"top", 188);
       .px2em(~"right", 435);
     }
     .item3 {
-      .px2em(~"top", 188);
-      .px2em(~"right", 365);
+      .px2em(~"top", 190);
+      .px2em(~"right", 370);
     }
     .item4 {
-      .px2em(~"top", 187);
-      .px2em(~"right", 258);
+      .px2em(~"top", 192);
+      .px2em(~"right", 248);
     }
     .item5 {
-      .px2em(~"top", 186);
-      .px2em(~"right", 156);
+      .px2em(~"top", 189);
+      .px2em(~"right", 146);
     }
   }
   .deployment {
@@ -480,5 +487,26 @@
     }
     .slick-next { right: -10px;}
     .slick-prev { left: -10px;}
+    .slick-dots {
+      .px2em(~"bottom", -40);
+    }
+    .slick-dots {
+      li button {
+        .green-theme & {
+          border-color: @green-primary;
+        }
+        .orange-theme & {
+          border-color: @orange-primary;
+        }
+      }
+      .slick-active button {
+        .green-theme & {
+          background-color: @green-primary;
+        }
+        .orange-theme & {
+          background-color: @orange-primary;
+        }
+      }
+    }
   }
 }

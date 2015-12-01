@@ -23,7 +23,7 @@
 
   Plugin.prototype = {
     init: function() {
-      var self = this;
+      // var self = this;
       switch (this.options.type) {
         case BANNER:
           this.initBanner();
@@ -44,14 +44,14 @@
           this.initBanner();
       }
       //
-      $(document).off('click.initSlider').on('click.initSlider', '[data-item-tab]', function(e) {
-        var target = $(e.target);
-        var thisTab = target.attr('data-item-tab') ? target : target.closest('[data-item-tab]');
-        var itemTarget = thisTab.attr('data-target');
-        var thisSlide = $('[data-item="'+ itemTarget + '"]');
-        var slideLength = thisSlide.attr('data-slidetablet');
-        self.initSlider(slideLength);
-      });
+      // $(document).off('click.initSlider').on('click.initSlider', '[data-item-tab]', function(e) {
+      //   var target = $(e.target);
+      //   var thisTab = target.attr('data-item-tab') ? target : target.closest('[data-item-tab]');
+      //   var itemTarget = thisTab.attr('data-target');
+      //   var thisSlide = $('[data-item="'+ itemTarget + '"]');
+      //   var slideLength = thisSlide.attr('data-slidetablet');
+      //   self.initSlider(slideLength);
+      // });
     },
     initSlider: function (slidetablet) {
       var optionSlick = {
@@ -63,7 +63,7 @@
         slidesToShow: 5,
         draggable: false,
         arrows: true,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         responsive: [{
           breakpoint: 1280,
           settings: {
@@ -79,7 +79,7 @@
           breakpoint: 1025,
           settings: {
             slidesToShow: slidetablet ? slidetablet : 5,
-            slidesToScroll: 1
+            slidesToScroll: slidetablet ? slidetablet : 5
           }
         }]
       };
@@ -96,14 +96,13 @@
       var optionSlick = {
         accessibility: false,
         autoplay: false,
-        autoplaySpeed: that.options.autoplayspeed,
         infinite: true,
         pauseOnHover: true,
         draggable: false,
         useCSS: false,
         slidesToShow: that.options.slidetoshow,
         arrows: true,
-        slidesToScroll: 1,
+        slidesToScroll: that.options.slidetoshow,
         responsive: [{
           breakpoint: 1280,
           settings: {
@@ -118,8 +117,8 @@
         },{
           breakpoint: 1025,
           settings: {
-            slidesToShow: that.options.slidetablet ? that.options.slidetablet : 5,
-            slidesToScroll: 1
+            slidesToShow: that.options.slidetablet || 5,
+            slidesToScroll: that.options.slidetablet || 5
           }
         }]
       };
@@ -127,16 +126,14 @@
       this.element.slick(optionSlick);
     },
     initManager: function() {
-      var that = this/*, opt = that.options*/;
       var optionSlick = {
         accessibility: false,
         autoplay: false,
-        autoplaySpeed: that.options.autoplayspeed,
         infinite: true,
         pauseOnHover: true,
         draggable: false,
         slidesToShow: 4,
-        useCSS:false,
+        useCSS: false,
         arrows: true,
         slidesToScroll: 1,
         responsive: [{
@@ -165,11 +162,9 @@
       this.element.slick(optionSlick);
     },
     initOurService: function() {
-      var that = this/*, opt = that.options*/;
       var optionSlick = {
         accessibility: false,
         autoplay: false,
-        autoplaySpeed: that.options.autoplayspeed,
         infinite: true,
         pauseOnHover: true,
         draggable: false,
@@ -185,8 +180,8 @@
           breakpoint: 767,
           settings: {
             slidesToShow: 1,
-            arrows: true,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            dots: true
           }
         }]
       };
@@ -194,28 +189,30 @@
       this.element.slick(optionSlick);
     },
     initOurCaseStudy: function() {
-      var that = this/*, opt = that.options*/;
       var optionSlick = {
         accessibility: false,
         autoplay: false,
-        autoplaySpeed: that.options.autoplayspeed,
         infinite: true,
         pauseOnHover: true,
-        draggable: false,
+        arrows: false,
+        dots: true,
+        mobileFirst: true,
+        draggable: true,
         slidesToShow: 1,
-        arrows: true,
         useCSS: false,
-        adaptiveHeight: true,
         slidesToScroll: 1,
         responsive: [{
-          breakpoint: 1280,
-          settings: {
-            draggable: true
-          },
-        }, {
           breakpoint: 767,
           settings: {
-            dots: true
+            arrows: true,
+            dots: false
+          }
+        }, {
+          breakpoint: 1280,
+          settings: {
+            draggable: false,
+            arrows: true,
+            dots: false
           }
         }]
       };
@@ -224,6 +221,7 @@
     },
     initBanner: function() {
       var that = this;
+      var opt = that.options;
       var optionSlick = {
         accessibility: false,
         autoplay: true,
@@ -244,7 +242,27 @@
         }]
       };
 
-      this.element.slick(optionSlick);
+      // this.element.slick(optionSlick);
+      this.element.slick(optionSlick)
+        .on ('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          if(opt.isFirst) {
+            var target = $(this).find('[' + opt.dataSlickIndex + '="' + nextSlide +'"] .' + opt.classHidden);
+            if(target && target.length) {
+              opt.elementTarget = target.closest('[' + opt.dataSlickIndex + ']');
+              opt.indexTargetItem = parseInt(opt.elementTarget.attr(opt.dataSlickIndex));
+              opt.isFirst = false;
+            }
+          }
+          else {
+            if(nextSlide === opt.indexTargetItem) {
+              if ( (currentSlide === (nextSlide - 1)) || (nextSlide ===0 && currentSlide !== 1) ){
+                var content = opt.elementTarget.find('.consulting.hide');
+                opt.elementTarget.find('.consulting').addClass(opt.classHidden);
+                content.removeClass(opt.classHidden);
+              }
+            }
+          }
+        });
     },
     destroy: function() {
       // deinitialize
@@ -266,10 +284,15 @@
   };
 
   $.fn[pluginName].defaults = {
-    autoplayspeed: 10000,
+    autoplayspeed: 5000,
     classSlickTrack: 'slick-track',
+    classHidden: 'hide',
     slidetoshow: 5,
-    slideTablet:'data-slidetablet'
+    slideTablet: 'data-slidetablet',
+    dataSlickIndex: 'data-slick-index'
+    indexTargetItem: '',
+    elementTarget : '',
+    isFirst: true,
   };
 
   $(function() {

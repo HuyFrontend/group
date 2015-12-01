@@ -5,41 +5,62 @@
       .row(data-toggle="HoverElement")
         #map-contact.col-md-8.col-md-push-4.map
           +img("../images/img-offices.png", $i18n.contact.locations.office).world
-          +link($i18n.contact.locations.paris, "javascript:void(0)").link-locate.pin-paris.green(data-item-hover, data-target="data-address-france")
-            +img("../images/img-pin-green.png", $i18n.contact.locations.paris)
-          +link($i18n.contact.locations.scandinavia, "javascript:void(0)").link-locate.pin-scandinavia.green(data-item-hover, data-target="data-address-scandinavia")
-            +img("../images/img-pin-green.png", $i18n.contact.locations.scandinavia)
-          +link($i18n.contact.locations.mauritius, "javascript:void(0)").link-locate.pin-mauritius.orange(data-item-hover, data-target="data-address-mauritius")
-            +img("../images/img-pin-orange.png", $i18n.contact.locations.mauritius)
-          +link($i18n.contact.locations.vietnam, "javascript:void(0)").link-locate.pin-vietnam.orange(data-item-hover, data-target="data-address-vietnam")
-            +img("../images/img-pin-orange.png", $i18n.contact.locations.vietnam)
-            +link($i18n.contact.locations.nyc, "javascript:void(0)").link-locate.pin-hongkong.comming
-              +img("../images/img-pin-yellow.png", $i18n.contact.locations.nyc)
-          .parent-tooltip.link-locate.pin-japan
-            +link($i18n.contact.locations.japan, "javascript:void(0)")(data-toggle="TooltipElement", data-tooltip-type="right-tooltip", data-tooltip-content="<div class='inner'><h3 class='title-tooltip'>#{$i18n.contact.locations.japan}</h3><div class='content-tooltip'><p>#{$i18n.contact.locations.japan_content}</p></div></div><span class='triangle'></span>")
-              +img("../images/img-pin-white.png", $i18n.contact.locations.japan)
+          if (isPage === 'consulting')
+            +link($i18n.contact.locations.paris, "javascript:void(0)").link-locate.pin-paris.green(data-item-hover, data-target="data-address-france", data-location="2", data-content= $i18n.contact.select_group2)
+              +img("../images/img-pin-green.png", $i18n.contact.locations.paris)
+            +link($i18n.contact.locations.scandinavia, "javascript:void(0)").link-locate.pin-scandinavia.green(data-item-hover, data-target="data-address-scandinavia", data-location="3", data-content= $i18n.contact.select_group3)
+              +img("../images/img-pin-green.png", $i18n.contact.locations.scandinavia)
+            .parent-tooltip.link-locate.pin-japan
+              +link($i18n.contact.locations.japan, "javascript:void(0)")(data-toggle="TooltipElement", data-tooltip-type="right-tooltip", data-tooltip-content="<div class='inner'><h3 class='title-tooltip'>#{$i18n.contact.locations.japan}</h3><div class='content-tooltip'><p>#{$i18n.contact.locations.japan_content}</p></div></div><span class='triangle'></span>")
+                +img("../images/img-pin-white.png", $i18n.contact.locations.japan)
+          else if (isPage === 'solutions')
+            +link($i18n.contact.locations.vietnam, "javascript:void(0)").link-locate.pin-vietnam.orange(data-item-hover, data-target="data-address-vietnam", data-location="4", data-content= $i18n.contact.select_group4)
+              +img("../images/img-pin-orange.png", $i18n.contact.locations.vietnam)
+          else
+            +link($i18n.contact.locations.paris, "javascript:void(0)").link-locate.pin-paris.green(data-item-hover, data-target="data-address-france", data-location="2", data-content= $i18n.contact.select_group2)
+              +img("../images/img-pin-green.png", $i18n.contact.locations.paris)
+            +link($i18n.contact.locations.scandinavia, "javascript:void(0)").link-locate.pin-scandinavia.green(data-item-hover, data-target="data-address-scandinavia", data-location="3", data-content= $i18n.contact.select_group3)
+              +img("../images/img-pin-green.png", $i18n.contact.locations.scandinavia)
+            +link($i18n.contact.locations.vietnam, "javascript:void(0)").link-locate.pin-vietnam.orange(data-item-hover, data-target="data-address-vietnam", data-location="4", data-content= $i18n.contact.select_group4)
+              +img("../images/img-pin-orange.png", $i18n.contact.locations.vietnam)
+              +link($i18n.contact.locations.nyc, "javascript:void(0)").link-locate.pin-hongkong.yellow(data-item-hover, data-target="data-address-hongkong", data-location="1", data-content= $i18n.contact.select_group1)
+                +img("../images/img-pin-yellow.png", $i18n.contact.locations.nyc)
+            .parent-tooltip.link-locate.pin-japan
+              +link($i18n.contact.locations.japan, "javascript:void(0)")(data-toggle="TooltipElement", data-tooltip-type="right-tooltip", data-tooltip-content="<div class='inner'><h3 class='title-tooltip'>#{$i18n.contact.locations.japan}</h3><div class='content-tooltip'><p>#{$i18n.contact.locations.japan_content}</p></div></div><span class='triangle'></span>")
+                +img("../images/img-pin-white.png", $i18n.contact.locations.japan)
         .col-md-4.col-md-pull-8.info
           p=$i18n.contact.locations.consulting
           p=$i18n.contact.locations.solutions
     .row
       .col-sm-7.col-xs-12
         .contact-form.left
-          form(action='/data/submit-contact.json', method='post', novalidate, name='contactform', data-validate-form, autocomplete="off").form-1#contact-form
+          form(action='/data/submit-contact.json', method='post', novalidate, name='contactform', data-validate-form, data-type-valid="contact-form", data-remove-holder="all", autocomplete="off").form-1#contact-form
+            .form-group.form-select
+              .custom-select
+                select(name="contact_to")
+                  if (isPage === 'consulting')
+                    option(value="2")= $i18n.contact.select_group2
+                    option(value="3")= $i18n.contact.select_group3
+                  else if (isPage === 'solutions')
+                    option(value="4")= $i18n.contact.select_group4
+                  else
+                    option(value="1")= $i18n.contact.select_group1
+                    option(value="2")= $i18n.contact.select_group2
+                    option(value="3")= $i18n.contact.select_group3
+                    option(value="4")= $i18n.contact.select_group4
+                span.value-selected #{$i18n.contact.select_group2}
             .form-group
               label(data-holder) Name
                 span.orange *
               +input('text', 'username', '', 'username')(required="required")
-              span.error-message.hide!= $i18n.contact.errormsg.name
             .form-group
               label(data-holder) Email
                 span.orange *
               +input('text', 'email', '', 'email')(required="required")
-              span.error-message.hide!= $i18n.contact.errormsg.email
             .form-group.message
               label(data-holder) Message
                 span.orange *
               textarea(id="message", name='message', required="required")
-              span.error-message.hide!= $i18n.contact.errormsg.message
             .form-group.capcha
               .field-capcha
                 +img('../images/capcha.jpg', '')
@@ -47,42 +68,83 @@
                 label(data-holder) Security image
                   span.orange *
                 +input('text', 'security', '', 'security')(required="required")
-                span.error-message.hide!= $i18n.contact.errormsg.security
             button(type="submit", name="submit").send-btn.btn.btn-color
               span Send
       .col-sm-5.col-xs-12
         .contact-info
-          .green-color(data-address-france)
-            +address({
-              name: $i18n.contact.brand1.name,
-              country: $i18n.contact.brand1.country,
-              address1: $i18n.contact.brand1.address1,
-              address2: $i18n.contact.brand1.address2,
-              title: $i18n.contact.brand1.phone
-            })
-          .green-color(data-address-scandinavia)
-            +address({
-              name: $i18n.contact.brand2.name,
-              country: $i18n.contact.brand2.country,
-              address1: $i18n.contact.brand2.address1,
-              address2: $i18n.contact.brand2.address2,
-              title: $i18n.contact.brand2.phone
-            })
-          .orange-color(data-address-vietnam)
-            +address({
-              name: $i18n.contact.brand3.name,
-              country: $i18n.contact.brand3.country,
-              address1: $i18n.contact.brand3.address1,
-              address2: $i18n.contact.brand3.address2,
-              title: $i18n.contact.brand3.phone
-            })
-          .orange-color(data-address-mauritius)
-            +address({
-              name: $i18n.contact.brand4.name,
-              country: $i18n.contact.brand4.country,
-              address1: $i18n.contact.brand4.address1,
-              address2: $i18n.contact.brand4.address2
-            })
+          if (isPage === 'consulting')
+            //- .yellow-color(data-address-hongkong)
+            //-   +address({
+            //-     name: $i18n.contact.brand4.name,
+            //-     country: $i18n.contact.brand4.country,
+            //-     address1: $i18n.contact.brand4.address1,
+            //-     address2: $i18n.contact.brand4.address2
+            //-   })
+            .green-color(data-address-france)
+              +address({
+                name: $i18n.contact.brand1.name,
+                country: $i18n.contact.brand1.country,
+                address1: $i18n.contact.brand1.address1,
+                address2: $i18n.contact.brand1.address2,
+                title: $i18n.contact.brand1.phone
+              })
+            .green-color(data-address-scandinavia)
+              +address({
+                name: $i18n.contact.brand2.name,
+                country: $i18n.contact.brand2.country,
+                address1: $i18n.contact.brand2.address1,
+                address2: $i18n.contact.brand2.address2,
+                title: $i18n.contact.brand2.phone
+              })
+
+          else if (isPage === 'solutions')
+            //- .yellow-color(data-address-hongkong)
+            //-   +address({
+            //-     name: $i18n.contact.brand4.name,
+            //-     country: $i18n.contact.brand4.country,
+            //-     address1: $i18n.contact.brand4.address1,
+            //-     address2: $i18n.contact.brand4.address2
+            //-   })
+            .orange-color(data-address-vietnam)
+              +address({
+                name: $i18n.contact.brand3.name,
+                country: $i18n.contact.brand3.country,
+                address1: $i18n.contact.brand3.address1,
+                address2: $i18n.contact.brand3.address2,
+                title: $i18n.contact.brand3.phone
+              })
+          else
+            .yellow-color(data-address-hongkong)
+              +address({
+                name: $i18n.contact.brand4.name,
+                country: $i18n.contact.brand4.country,
+                address1: $i18n.contact.brand4.address1,
+                address2: $i18n.contact.brand4.address2
+              })
+            .green-color(data-address-france)
+              +address({
+                name: $i18n.contact.brand1.name,
+                country: $i18n.contact.brand1.country,
+                address1: $i18n.contact.brand1.address1,
+                address2: $i18n.contact.brand1.address2,
+                title: $i18n.contact.brand1.phone
+              })
+            .green-color(data-address-scandinavia)
+              +address({
+                name: $i18n.contact.brand2.name,
+                country: $i18n.contact.brand2.country,
+                address1: $i18n.contact.brand2.address1,
+                address2: $i18n.contact.brand2.address2,
+                title: $i18n.contact.brand2.phone
+              })
+            .orange-color(data-address-vietnam)
+              +address({
+                name: $i18n.contact.brand3.name,
+                country: $i18n.contact.brand3.country,
+                address1: $i18n.contact.brand3.address1,
+                address2: $i18n.contact.brand3.address2,
+                title: $i18n.contact.brand3.phone
+              })
           if (isPage === 'solutions')
             .social-contact
               .group-link-contact

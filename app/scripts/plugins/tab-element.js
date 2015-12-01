@@ -66,6 +66,10 @@
             }
             if(targetElement.classList) {
               targetElement.classList.remove(opt.classHide);
+              var dtData = jQuery(targetElement);
+              if(dtData.hasClass('slick-initialized')){
+                dtData.slick('setPosition');
+              }
             }
             else {
               targetElement.removeClass(opt.classHide);

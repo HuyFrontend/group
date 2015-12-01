@@ -17,7 +17,7 @@
       form {
         .px2em(~"padding-bottom", 40px);
       }
-      input, textarea {width: 100%;}
+      input, textarea, select { width: 100%;}
       textarea {min-height: 190px;}
       .send-btn {
         float: right;
@@ -75,14 +75,11 @@
       .pos-pin(17%,52.5%);
       z-index: 2;
     }
-    .pin-mauritius {
-      .pos-pin(62.5%,64%);
-    }
     .pin-vietnam {
       .pos-pin(47.5%,76%);
     }
     .pin-hongkong {
-      .pos-pin(31.5%, 81.8%);
+      .pos-pin(31%, 81.8%);
     }
     .pin-japan {
       .pos-pin(28%, 87%);
@@ -115,9 +112,6 @@
        .pin-vietnam {
         .pos-pin(48.5%, 76%);
        }
-      .pin-mauritius {
-        .pos-pin(63.5%,64%);
-      }
     }
   }
   .link-locate {
@@ -162,6 +156,14 @@
       }
     }
   }
+  .block-locations {
+    .info {
+      padding:0 20%;
+      p {
+        .px2em(~"padding-top", 10);
+      }
+    }
+  }
 }
 @media @screen-md-down {
   .contact-block {
@@ -179,23 +181,12 @@
         .px2em(~"margin-bottom", 15px);
       }
     }
-    .block-locations {
-      .info {
-        padding-top: 0;
-        p {
-          .px2em(~"padding-top", 10px);
-        }
-      }
-    }
   }
 }
 @media @screen-lg-up {
   .contact-block {
     .block-locations {
       .map {
-        .pin-mauritius {
-          left: 63%;
-        }
         .pin-vietnam {
           left: 74.5%;
         }

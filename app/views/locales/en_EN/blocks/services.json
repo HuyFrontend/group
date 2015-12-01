@@ -18,7 +18,7 @@
         "content": " We document requirements and design technical solutions."
       },
       "item3": {
-        "title": "Specifications",
+        "title": "Technical Specifications",
         "content": "We help define and design complex applications."
       },
       "item4": {
@@ -33,7 +33,7 @@
     "solutions": {
       "item_main": {
         "title": "SUTRIX SOLUTIONS",
-        "desc": "Boost Sales",
+        "desc": "Increase revenue",
         "content": "E-Commerce, CMS, Intranet<br>Responsive Web Design<br>Adobe AEM, Sitecore<br>Drupal, Wordpress, Magento"
       },
       "item1": {

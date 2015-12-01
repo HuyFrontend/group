@@ -27,12 +27,6 @@
       "address1": "14 Avenue des Lataniers, ",
       "address2": "Quatre Bornes, Mauritius"
     },
-    "errormsg": {
-      "name": "Please enter your name",
-      "email": "Please enter email address",
-      "message": "Please enter comments",
-      "security": "Please enter code"
-    },
     "locations" : {
       "consulting": "Sutrix Consulting has offices in France and Demark for on-site digital consulting and management services.",
       "solutions": "Sutrix Solutions has offices in Vietnam and Mauritius for digital production and support services.",
@@ -44,5 +38,10 @@
       "japan" : "Japan office",
       "office" : "Offices on world"
     },
+    "select_notice": "You are writing to&nbsp;",
+    "select_group1": "SUTRIX GROUP - HONG KONG",
+    "select_group2": "SUTRIX CONSULTING - FRANCE",
+    "select_group3": "SUTRIX CONSULTING - SCANDINAVIA",
+    "select_group4": "SUTRIX SOLUTIONS - VIETNAM",
     "backToTop": "Top"
   },

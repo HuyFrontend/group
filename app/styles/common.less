@@ -30,6 +30,9 @@
 .green {
   color: @green-primary;
 }
+.yellow {
+  color: @yellow-primary;
+}
 .orange {
   color :@orange-primary;
 }
@@ -40,7 +43,7 @@ img {
   display: block;
 }
 
-input, textarea, button {
+input, textarea, button, select {
   border: 0;
   appearance: normal;
 }
@@ -76,20 +79,26 @@ input, textarea, button {
   content: "";
   position: absolute;
   .no-touch &:hover img {
-    opacity: .8;
+    opacity: .75;
   }
 }
 .active {
   &.green-color {
     color: @green-primary;
     a {
-      color: @green-primary!important;
+      color: @green-primary !important;
     }
   }
   &.orange-color {
     color: @orange-primary;
     a {
-      color: @orange-primary!important;
+      color: @orange-primary !important;
+    }
+  }
+  &.yellow-color {
+    color: @yellow-primary;
+    a {
+      color: @yellow-primary !important;
     }
   }
 }

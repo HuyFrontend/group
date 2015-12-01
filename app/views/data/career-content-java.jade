@@ -1,4 +1,3 @@
-include ../mixins/all
 .row
   .col-sm-6.max-height
     h3.title Java developer
@@ -28,52 +27,6 @@ include ../mixins/all
       p • Only 40h working/week (Full weekend off)
       p • 12 days holiday/year, take holiday on X’mas, take ½ off in birthday
       p • Free snacks & beverages
-  .col-sm-6.custom-padding
-    h3.title Post your resume
-    .content
-      form(action='', method='post', novalidate, name='resumeform', autocomplete="off").form-1.resume-form#resume-form
-        .row
-          .col-sm-6
-            .form-group
-              label(for="username") Name
-                span.orange *
-              +input('text', 'username', '', 'username')(required="required")
-              span.error-message.hide Please enter your first name
-            .form-group
-              label(for="lastname") Last name
-                span.orange *
-              +input('text', 'lastname', '', 'lastname')(required="required")
-              span.error-message.hide Please enter your last name
-            .form-group
-              label(for="email") Email
-                span.orange *
-              +input('text', 'email', '', 'email')(required="required")
-              span.error-message.hide Please enter email address
-            .form-group
-              label Upload CV
-                span.orange *
-              .upload
-                +input('file', 'file')(required="required")
-                +input('text', 'upload', '', 'upload')
-                span Browse
-              span.error-message.hide Please select your resume
-          .col-sm-6.break-line
-            .form-group.comment
-              label(for="comment") Comments
-                span.orange
-              textarea(id="comment", name='comment')
-            .form-group.capcha
-              label(for="security") Security images
-                span.orange *
-              .field-capcha
-                +img('../images/photo-capcha.jpg', '')
-              .field-security
-                +input('text', 'security', '', 'security')(required="required")
-                span.error-message.hide Please enter code
-            .form-group
-              button(type="submit", name="submitbtn").send-btn.btn.btn-color
-                span Send
-              button(type="reset").send-btn.btn.btn-color.clear-btn
-                span Clear
+  include career-form
 button(type="button", data-return="return-career").back-btn.btn.btn-color
   span Back

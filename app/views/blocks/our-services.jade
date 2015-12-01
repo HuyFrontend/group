@@ -2,7 +2,7 @@
   .grid-fluid
     .inner
       if (isPage === "consulting")
-        h2.title Our services&nbsp;
+        h2.title!=$i18n.our_services.main_title
           //- span Boost sales
         .list-our-service(data-slide, data-type="ourService", data-toggle="SetHeightItem")
           .item
@@ -10,23 +10,27 @@
               +img('../images/degital-strategy.png', 'Digital Strategy')
             .service-info
               .service-title
-                h2.title-1 Digital
+                h2.title-1!=$i18n.our_services.consulting.item1.title
               ul(data-set-size="['height']")
-                li Digitail
-                li Technical Consultant
-                li Digital Architecture Strategy &amp; Development
+                li!=$i18n.our_services.consulting.item1.featured1
+                li!=$i18n.our_services.consulting.item1.featured2
+                li!=$i18n.our_services.consulting.item1.featured3
+                li!=$i18n.our_services.consulting.item1.featured4
+                li!=$i18n.our_services.consulting.item1.featured5
           .item
             .image
               +img('../images/degital-design.png', 'Digital Design')
             .service-info
               .service-title
-                h2.title-1 Digital Design
+                h2.title-1!=$i18n.our_services.consulting.item2.title
               ul(data-set-size="['height']")
-                li Web/Mobile design
-                li UX/Ui design
-                li Ergonomics
+                li!=$i18n.our_services.consulting.item2.featured1
+                li!=$i18n.our_services.consulting.item2.featured2
+                li!=$i18n.our_services.consulting.item2.featured3
+                li!=$i18n.our_services.consulting.item2.featured4
+                li!=$i18n.our_services.consulting.item2.featured5
       else
-        h2.title Our services&nbsp;
+        h2.title!=$i18n.our_services.main_title
           //- span Increase revenue
         .list-our-service(data-slide, data-type="ourService", data-toggle="SetHeightItem")
           .item
@@ -34,36 +38,36 @@
               +img('../images/web-mobile.png', 'Web & Mobile Develoment')
             .service-info
               .service-title
-                h2.title-1 Web &amp; Mobile Development
+                h2.title-1!=$i18n.our_services.solutions.item1.title
               ul(data-set-size="['height']")
-                li E-Commerce, CMS, Intranet
-                li Responsive Web Design
-                li Adobe AEM, Sitecore
-                li Drupal, Wordpress, Magento
-                li iPhone, iPad, Apple Watch
-                li Android Phone &amp; Tablet
-                li Windows Phone &amp; Tablet
+                li!=$i18n.our_services.solutions.item1.featured1
+                li!=$i18n.our_services.solutions.item1.featured2
+                li!=$i18n.our_services.solutions.item1.featured3
+                li!=$i18n.our_services.solutions.item1.featured4
+                li!=$i18n.our_services.solutions.item1.featured5
+                li!=$i18n.our_services.solutions.item1.featured6
+                li!=$i18n.our_services.solutions.item1.featured7
           .item
             .image.image-testing
               +img('../images/testing.png', 'Testing')
             .service-info
               .service-title
-                h2.title-1 Testing
+                h2.title-1!=$i18n.our_services.solutions.item2.title
               ul(data-set-size="['height']")
-                li Integration Test
-                li Compatibility Test
-                li Performance/Stress Test
-                li Automation Test - Cucumber
-                li Selenium WebDriver
-                li Security Test - Acunetix
+                li!=$i18n.our_services.solutions.item2.featured1
+                li!=$i18n.our_services.solutions.item2.featured2
+                li!=$i18n.our_services.solutions.item2.featured3
+                li!=$i18n.our_services.solutions.item2.featured4
+                li!=$i18n.our_services.solutions.item2.featured5
+                li!=$i18n.our_services.solutions.item2.featured6
            .item
             .image.image-support
               +img('../images/support.png', 'Support')
             .service-info
               .service-title
-                h2.title-1 Support
+                h2.title-1!=$i18n.our_services.solutions.item3.title
               ul
-                li Level 1, Level 2, &amp; Level 3 Support
-                li Call Center
-                li Webmastering
-                li Sustem monitoring
+                li!=$i18n.our_services.solutions.item3.featured1
+                li!=$i18n.our_services.solutions.item3.featured2
+                li!=$i18n.our_services.solutions.item3.featured3
+                li!=$i18n.our_services.solutions.item3.featured4

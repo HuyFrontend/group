@@ -1,26 +1,27 @@
   "management": {
+    "title": "Les dirigeants",
     "leader1": {
       "alt": "david pugliesi",
       "name": "david pugliesi",
-      "position": "President",
-      "desc": "David has over 20 years of experience in IT and brings his French business and management know-how to ensure the group has the right strategies and the resources are in place to execute and deliver."
+      "position": "Président",
+      "desc": "Ayant plus de 20 ans d’expérience dans le domaine de l’IT, David apporte ses connaissances managériales et son savoir-faire pour la croissance du groupe. Il met en place les bonnes stratégies et fait correspondre les ressources pour un service et une livraison de très grande qualité."
     },
     "leader2": {
       "alt": "Quan Tran",
       "name": "Quan Tran",
-      "position": "Vice President",
-      "desc": "Quan has over 20 years of experience in IT having worked for IBM and Canon in the US. He oversees the group partnerships, systems and processes so that the team has the tools to make great deliveries."
+      "position": "Vice Président",
+      "desc": "Ayant plus de 20 ans d’expérience dans le domaine de l’IT  dans des groupes comme IBM ou encore Canon aux Etats-Unis. Quan supervise les partenariats du groupe, son système et son fonctionnement, afin que les équipe soient dans des conditions idéales pour produire et livrer vos produits."
     },
     "leader3": {
       "alt": "Christophe Lam",
       "name": "Christophe Lam",
       "position": "business development director",
-      "desc": "Christophe has over 10 years experience in International Business Development, Account Management, Consultative sales in France and Vietnam. He oversees the group new business development and also grow the existing business accounts."
+      "desc": "Christophe a plus de 10 ans d’expérience dans le commerce international , la Gestion de compte et le conseil en France et au Vietnam. Il supervise les stratégies de développement et développe la gestion des comptes."
     },
     "leader4": {
       "alt": "Khang Phan",
       "name": "Khang Phan",
       "position": "Operations Director",
-      "desc": "Khang oversees all productions inside Sutrix and ensures the company’s operations, processes and policies are executing effectively in support of our vision and mission. Khang has been with the group since 2004 working up through the ranks to his current role as Operations Director."
+      "desc": "Khang fait partie du groupe depuis 2004. Il a occupé plusieurs postes au sein de sutrix avant de devenir le Directeur Opération. Aujourd'hui, Il supervise toutes les activités de production et s'assure que les procédures, la politique, et la vision du groupe sont respectées et éxecutées efficacement."
     }
   },

@@ -85,9 +85,23 @@
     transition: .3s;
     transition-property: top, opacity, visibility;
     transform: translate3d(0,0,0);
+    .are-here {
+      .px2em(~"font-size", 25);
+      font-family: 'RalewayBold';
+      color: @yellow-primary;
+      display: block;
+      text-transform: uppercase;
+      .px2em(~"padding-top", 20);
+      .green-theme & {
+        color: @green-primary;
+      }
+      .orange-theme & {
+        color: @orange-primary;
+      }
+    }
   }
   .menu {
-    .px2em(~"padding", 63 0 30);
+    .px2em(~"padding", 43 0 30);
     li {
       .px2em(~"padding", 17 0);
     }
@@ -126,7 +140,7 @@
     }
   }
   .btn-menu {
-    @h: 23px;
+    @h: 24px;
     @hLine: 3px;
     display: inline-block;
     .px2em(~"margin-left", 15px);
@@ -230,6 +244,16 @@
   }
 }
 
+@media @screen-sm-only {
+  .header {
+    .btn-menu {
+      .line-bottom {
+        top: 19px;
+      }
+    }
+  }
+}
+
 @media @screen-sm-down {
   .header {
     .language {
@@ -240,13 +264,10 @@
         .px2em(~"font-size", 17);
       }
     }
-    .btn-menu {height: 19px;}
+    .btn-menu {height: 20px;}
     .btn-menu {
       .line-middle {
         top: 55%;
-      }
-      .line-bottom {
-        top: 17px;
       }
     }
     .active {
@@ -256,6 +277,7 @@
     }
   }
 }
+
 
 @media @screen-xs-only {
   .header {
@@ -280,7 +302,7 @@
       font-size: 0;
     }
     .btn-menu {
-      width: 22px;
+      .size(22px,19px);
       .px2em(~"padding", 9 0 9);
       .line {
         width: 22px;
@@ -301,9 +323,12 @@
       max-width: none;
       .px2em(~"padding", 0 15);
       overflow-y: auto;
+      .are-here {
+        .px2em(~"font-size", 16);
+      }
     }
     .menu {
-      .px2em(~"padding", 12 0);
+      .px2em(~"padding", 12px 0);
       a {.px2em(~"font-size", 16);}
     }
     .social {

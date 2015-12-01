@@ -10,6 +10,7 @@
       .px2em(~"left", 15px);
       transform: translateY(-50%);
       z-index: 1;
+      color: @gray-primary;
       cursor: inherit;
       span {font-size: 1.4em;}
     }
@@ -17,7 +18,38 @@
       .px2em(~"padding", 17.7px 15px);
       &:focus {box-shadow: 0 0 5px @yellow-primary;}
     }
-    input {
+    select {
+      .px2em(~"padding", 20px 40px 13px 15px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+    .custom-select {
+      .px2em(~"padding", 15px 40px 15px 15px);
+      .px2em(~"height", 52px);
+      text-align: left;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        .px2em(~"margin-top", -10px);
+        right: 10px;
+        .size(15px);
+        border-top: solid 3px @yellow-primary;
+        border-right: solid 3px @yellow-primary;
+        transform: rotate(135deg);
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+    }
+    input, select {
       font-size: 1em;
       .px2em(~"height", 52px);
     }
@@ -42,7 +74,6 @@
     }
     &.capcha {
       .field-capcha {
-        // .px2em(~"width", 162px);
         .px2em(~"width", 183px);
         position: absolute;
         z-index: 1;
@@ -50,16 +81,20 @@
       }
       .field-security {
         position: relative;
-        // .px2em(~"margin-left", 169px);
         .px2em(~"margin-left", 190px);
       }
     }
     &:first-child {margin-top: 0;}
   }
+  .form-select {
+    background-color: white;
+    overflow: hidden;
+    .px2em(~"height", 52px);
+  }
 }
 .resume-form {
   .form-group {
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       .px2em(~"padding", 9px 10px);
       color: black;
@@ -99,7 +134,9 @@
       input, textarea {
         .px2em(~"padding", 10px);
       }
-      input {.px2em(~"height", 40px);}
+      input, select {.px2em(~"height", 40px);}
+      select {.px2em(~"padding", 10px 5px);}
+
       label {
         .px2em(~"left", 10px);
       }
@@ -119,6 +156,13 @@
       .error-message {
         .px2em(~"top", 40px);
       }
+      .custom-select {
+        .px2em(~"padding", 10px 40px 10px 8px);
+        .px2em(~"height", 40px);
+      }
+    }
+    .form-select {
+      .px2em(~"height", 40px);
     }
   }
   .resume-form {
@@ -128,15 +172,16 @@
         .px2em(~"font-size", 13px);
       }
       textarea {min-height: 190px;}
+      input {.px2em(~"height", 45px);}
       .upload {
         input[type="file"] {
           position: absolute;
           opacity: 0;
           z-index: 1;
         }
-        input[type="text"] {.px2em(~"padding-right", 80px);}
+        input[type="text"] {.px2em(~"padding-right", 100px);}
         .browse {
-          .px2em(~"padding", 13px);
+          .px2em(~"padding", 15px);
         }
       }
       &.comment {
@@ -161,6 +206,10 @@
         span {width: 100%;}
       }
       .clear-btn {.px2em(~"margin-left", 2px);}
+      &.capcha {
+        .field-capcha {.px2em(~"width", 141px);}
+        .field-security {.px2em(~"margin-left", 148px);}
+      }
     }
     .break-line {.px2em(~"margin-top", 10px);}
   }
@@ -202,8 +251,8 @@
         }
       }
       &.capcha {
-        .field-capcha {.px2em(~"width", 126px);}
-        .field-security {.px2em(~"margin-left", 132px);}
+        .field-capcha {.px2em(~"width", 113px);}
+        .field-security {.px2em(~"margin-left", 120px);}
       }
       .send-btn {
         .px2em(~"margin-top", 18px);
@@ -216,6 +265,15 @@
   }
 }
 @media @screen-sm-only {
+  .form-1 {
+    .form-group {
+      .custom-select {
+        &:before {
+          .px2em(~"margin-top", -15px);  
+        }
+      }
+    }
+  }
   .resume-form {
     .form-group {
       input {height: 30px;}
@@ -229,8 +287,8 @@
         }
       }
       &.capcha {
-        .field-capcha {.px2em(~"width", 132px);}
-        .field-security {.px2em(~"margin-left", 137px);}
+        .field-capcha {.px2em(~"width", 118px);}
+        .field-security {.px2em(~"margin-left", 125px);}
       }
     }
   }

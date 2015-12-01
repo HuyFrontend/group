@@ -8,7 +8,8 @@ section#services.block-services
         .item.item-main
           //- a(href= "javascript:void(0)", data-tooltip-type="",data-toggle="TooltipElement", data-tooltip-content= "<div class='inner'><h3 class='title-tooltip'>"+$i18n.services.consulting.item_main.title+"</h3><div class='content-tooltip'>"+$i18n.services.consulting.item_main.content+"</p></div></div><span class='triangle'></span>")
           span.icon-services.icon-main
-          h3.item-title!=$i18n.services.consulting.item_main.title
+          h3.item-title
+            +link($i18n.services.consulting.item_main.title,'consulting.html')
           p.desc!=$i18n.services.consulting.item_main.desc
         +item-service({
           title: $i18n.services.consulting.item1.title,
@@ -52,7 +53,8 @@ section#services.block-services
           //- .parent-tooltip
           //- a(href= "javascript:void(0)", data-tooltip-type="right-tooltip",data-toggle="TooltipElement", data-tooltip-content= "<div class='inner'><h3 class='title-tooltip'>"+$i18n.services.solutions.item_main.title+"</h3><div class='content-tooltip'>"+$i18n.services.solutions.item_main.content+"</p></div></div><span class='triangle'></span>")
           span.icon-services.icon-main
-          h3.item-title!=$i18n.services.solutions.item_main.title
+          h3.item-title
+            +link($i18n.services.solutions.item_main.title, 'solutions.html')
           p.desc!=$i18n.services.solutions.item_main.desc
         +item-service({
           title: $i18n.services.solutions.item1.title,

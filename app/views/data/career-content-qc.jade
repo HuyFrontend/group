@@ -1,4 +1,3 @@
-include ../mixins/all
 .row
   .col-sm-6.max-height
     h3.title QC - HCMC-Vietnam
@@ -15,55 +14,6 @@ include ../mixins/all
       p
         strong Requirements
       p A university degree in Computer Science or a related discipline. Testing on different browser and platforms. Knowledge of e-commerce workflow and issues.
-  .col-sm-6.custom-padding
-    h3.title Post your resume
-    .content
-      form(action='', method='post', novalidate, name='resumeform', autocomplete="off").form-1.resume-form#resume-form
-        .row
-          .col-sm-6
-            .form-group
-              label(for="username") Name
-                span.orange *
-              .input-group
-                +input('text', 'username', '', 'username')(required="required")
-                span.error-message.hide Please enter your first name
-            .form-group
-              label(for="lastname") Last name
-                span.orange *
-              .input-group
-                +input('text', 'lastname', '', 'lastname')(required="required")
-                span.error-message.hide Please enter your last name
-            .form-group
-              label(for="email") Email
-                span.orange *
-              .input-group
-                +input('text', 'email', '', 'email')(required="required")
-                span.error-message.hide Please enter email address
-            .form-group
-              label Upload CV
-                span.orange *
-              .upload.input-group
-                +input('file', 'file')(required="required")
-                +input('text', 'upload', '', 'upload')
-                span.browse Browse
-                span.error-message Please select your resume
-          .col-sm-6.break-line
-            .form-group.comment
-              label(for="comment") Comments
-                span.orange
-              textarea(id="comment", name='comment')
-            .form-group.capcha
-              label(for="security") Security images
-                span.orange *
-              .field-capcha
-                +img('../images/photo-capcha.jpg', '')
-              .field-security.input-group
-                +input('text', 'security', '', 'security')(required="required")
-                span.error-message Please enter code
-            .form-group.group-btn
-              button(type="submit", name="submitbtn").send-btn.btn.btn-color
-                span Send
-              button(type="reset").send-btn.btn.btn-color.clear-btn
-                span Clear
+  include career-form
 button(type="button", data-return="return-career").back-btn.btn.btn-color
   span Back

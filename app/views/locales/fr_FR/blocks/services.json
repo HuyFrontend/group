@@ -1,7 +1,7 @@
   "services": {
     "main": {
       "title": "Services",
-      "content": "We provide integrated, end-to-end digital services so all your digital technology needs are designed, developed and managed by one technology partner only."
+      "content": "Nous fournissons des services globaux, de sorte que tous vos besoins digitaux soient conçus, développés et gérés par un seul et même partenaire technologique."
     },
     "consulting": {
       "item_main": {
@@ -10,51 +10,51 @@
         "content": "E-Commerce, CMS, Intranet<br>Responsive Web Design<br>Adobe AEM, Sitecore<br>Drupal, Wordpress, Magento"
       },
       "item1": {
-        "title": "Pre-sales Support",
-        "content": "We help analyze and estimate effort. We can also help make prototypes."
+        "title": "Service conseil",
+        "content": "Nous vous apportons notre expertise pour l’analyse et l’estimation de votre projet ainsi que pour la création de vos prototypes."
       },
       "item2": {
-        "title": "Requirement Analysis",
-        "content": " We document requirements and design technical solutions."
+        "title": "Analyse des besoins",
+        "content": "Nous analysons et formalisons vos demandes."
       },
       "item3": {
-        "title": "Specifications",
-        "content": "We help define and design complex applications."
+        "title": "Spécifications techniques",
+        "content": "Nous vous apportons des solutions d’architecture et de design pour vos applications."
       },
       "item4": {
-        "title": "Technical Support",
-        "content": "We advise on technical issues."
+        "title": "Support technique",
+        "content": "Nous vous conseillons en cas de problèmes techniques."
       },
       "item5": {
-        "title": "Training",
-        "content": "We train your team on new technology."
+        "title": "Formation",
+        "content": "Nous formons vos équipes aux nouvelles technologies."
       }
     },
     "solutions": {
       "item_main": {
         "title": "SUTRIX SOLUTIONS",
-        "desc": "Boost Sales",
+        "desc": "Increase revenue",
         "content": "E-Commerce, CMS, Intranet<br>Responsive Web Design<br>Adobe AEM, Sitecore<br>Drupal, Wordpress, Magento"
       },
       "item1": {
-        "title": "Web Development",
-        "content": "We make responsive front-end and back-end web application."
+        "title": "Développement web",
+        "content": "Nous créons des applications web interactives (front-end et back-end)."
       },
       "item2": {
-        "title": "Mobile Development",
-        "content": "We make native and hybrid mobile apps."
+        "title": "Dévelopement mobile",
+        "content": "Nous développons des applications mobiles natives et hybrides."
       },
       "item3": {
-        "title": "Testing",
-        "content": "We test the apps on desktop and mobile devices."
+        "title": "Contrôle de qualité",
+        "content": "Nous testons nos développements sur différents supports (mobiles, tablettes, ordinateurs)."
       },
       "item4": {
         "title": "Maintenance",
-        "content": "We enhance and upgrade your application."
+        "content": "Nous améliorons et développons le potentiel de votre application."
       },
       "item5": {
-        "title": "Call Center/Support",
-        "content": "We provide customer and tech support."
+        "title": "Centre d’Appel / de Support",
+        "content": "Nous fournissons un service après-vente pour vos produits."
       }
     },
     "deployment": "DEPLOYMENT",

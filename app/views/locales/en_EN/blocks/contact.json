@@ -22,16 +22,10 @@
       "phone": "+84 8 3997 5901"
     },
     "brand4": {
-      "name": "Sutrix solutions",
-      "country": "Mauritius",
-      "address1": "14 Avenue des Lataniers, ",
-      "address2": "Quatre Bornes, Mauritius"
-    },
-    "errormsg": {
-      "name": "Please enter your name",
-      "email": "Please enter email address",
-      "message": "Please enter comments",
-      "security": "Please enter code"
+      "name": "Sutrix group",
+      "country": "Hongkong",
+      "address1": "7/F South Seas Centre, Tower 2",
+      "address2": "75 Mody Road, Tsim Sha Tsui, Hong Kong"
     },
     "locations" : {
       "consulting": "Sutrix Consulting has offices in France and Demark for on-site digital consulting and management services.",
@@ -45,5 +39,10 @@
       "japan_content": "Coming soon",
       "office" : "Offices on world"
     },
+    "select_notice": "You are writing to&nbsp;",
+    "select_group1": "SUTRIX GROUP - HONG KONG",
+    "select_group2": "SUTRIX CONSULTING - FRANCE",
+    "select_group3": "SUTRIX CONSULTING - SCANDINAVIA",
+    "select_group4": "SUTRIX SOLUTIONS - VIETNAM",
     "backToTop": "Top"
   },

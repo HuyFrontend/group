@@ -1,48 +1,49 @@
  "about": {
     "introduce": {
-      "title": "About&nbsp;",
-      "text_default": "Sutrix group",
-      "text_bold": "Sutrix Group offers on-site digital consultancy and digital production services globally. Our strength is the end-to-end capability to design & develop global technology platforms and provide ongoing support & maintenance services.",
-      "text1": "As of 2015, Sutrix Group has over 350 staff in 4 countries to service our worldwide clients.",
-      "text2": "Sutrix Group has two subsidiaries:",
-      "text_green" :"Sutrix Consulting",
-      "text_orange" :"Sutrix Solutions",
-      "featured_text1" :"(France, Denmark): Digital Strategy, Consulting, UX Design, Training",
-      "featured_text2" :"(Vietnam, Mauritius) : Digital Production, Testing, Call Center, Support & Maintenance",
-      "link_download" : "Download Sutrix presentation"
+      "title": "À propos de",
+      "text_default": "&nbsp;groupe Sutrix",
+      "text_bold": "Notre service, vous proposer des solutions de conseil et de production digitale sur site. Notre objectif, mettre à disposition de nos clients des systèmes digitaux, d'organisation et de maintenance pour les secteurs du web et du mobile.",
+      "text1": "En 2015, le nombre d’employés au sein du groupe Sutrix a atteint les 300 personnes, réparties dans 5 pays d’Europe et d’Asie. ",
+      "text2": "Sutrix Group est composé de 2 divisions:",
+      "text_green" :"Sutrix Consulting:&nbsp;",
+      "text_orange" :"Sutrix Solutions:&nbsp;",
+      "featured_text1" :"vous propose des consultants sur site, pour vous accompagner dans vos démarches de création et de conception de plateformes digitales.",
+      "featured_text2" :"vous propose des solutions de développement web et mobile, ainsi que des services de support et de maintenance au quotidien.",
+      "link_download" : "Download Sutrix presentation",
+      "alt_map" : "Sutrix map"
     },
     "consulting": {
-      "title": "About &nbsp;",
-      "text_bold": "Sutrix Consulting currently has 2 offices in Copenhagen and Paris. We provide technology strategy consulting for multinationals who requires scalable, maintainable, global digital systems. Our consultant will work with your team to gather requirements and design optimized digital solutions for maximum impact &amp; ROI.",
+      "title": "À propos de&nbsp;",
+      "text_bold": "Sutrix dispose de bureaux à Paris et Copenhague. Nous fournissions des conseils en technologie et en stratégie pour des multinationales qui demandent des systèmes digitaux de haute performance. Nos consultants travailleront avec vos équipes pour regrouper et designer vos besoins en un système performant pour un impact et un retour sur investissement maximum.",
       "text_green": "Sutrix Consulting",
-      "text1": "As companies now require global apps optimized to work across devices and regions, our consultant will tailor design your application’s UX with the appropriate front-end and back-end frameworks for your business needs.",
-      "text2": "We can also provide on-site consulting, training and development as needed."
+      "text1": "Dans un monde en pleine globalisation, les entreprises d’aujourd'hui exige des applications utilisables sur tout support et dans toutes les régions du monde. Nos consultants travailleront en partenariat avec vos équipes pour définir le design et les architectures front-end et back-end en adéquation avec vos besoins.",
+      "text2": "Nous mettons à votre disposition des consultants pour vos sites de productions, des périodes de formation et de développement selon vos besoins."
       },
       "solutions": {
-        "title": "Aboutghjg &nbsp;",
+        "title": "À propos de&nbsp;",
         "text_orange": "Sutrix Solutions",
-        "text_bold": "Sutrix Solutions is located in Ho Chi Minh City and Mauritius. We build web &amp; mobile apps for the largest global brands in the Automotive, Tire, Banking, Insurance, Hospitality and Media industry.",
-        "text1": "Sutrix Solutions have long term partnerships with top tier Digital Agencies and System Integrators in the US, France, Denmark, Australia, Japan & Singapore. Our multinational management team with an experienced production team and a proven software development process ensures on-time delivery with highest possible quality and within budget.",
-        "text2": "We develop CMS, E-Commerce, Intranet, Mobile Apps, Social Media. We also test web & mobile apps to ensure it works seamlessly cross-platform on desktops and mobile devices."
+        "text_bold": "Sutrix solutions est présent a ho chi minh et a l’ile maurice. Nous développons des applications web et mobiles pour de grands groupes dans l'automobile, pneumatique, banque, assurance, hôtellerie et dans l'industrie des médias.",
+        "text1": "Sutrix solutions est partenaire de longue date avec des agences de communication au États-unis, France, Danemark, Australie, Japon et Singapour. Sutrix est composé d’equipes de management multinationales et d’equipes de production expérimentés en développement de logiciels. Nous assurons ainsi une livraison en accord avec votre besoin, une qualité maximum et un coût correspondant à votre budget. ",
+        "text2": "Nous développons des plateformes CMS, E-commerce, intranet, Applications mobile, réseaux sociaux. Nous testons aussi toute nos productions pour assurer une qualité maximum et sans défauts sur nos produits web et mobile."
       },
     "brand": {
       "consulting": {
         "title": "Sutrix Consulting",
-        "item1": "Pre-sales Support",
-        "item2": "Requirements Analysis",
-        "item3": "Specifications/Tech Design",
-        "item4": "Technical Support",
-        "item5": "Training",
-        "link_discover": "More Details"
+        "item1": "Service prévente",
+        "item2": "Analyse des besoins",
+        "item3": "Specifications/Architecture technique",
+        "item4": "Support technique",
+        "item5": "Formation",
+        "link_discover": "Plus D’informations"
       },
       "solution": {
         "title": "Sutrix Solutions",
-        "item1": "Web Development",
-        "item2": "Mobile Development",
-        "item3": "Testing",
+        "item1": "Développement web",
+        "item2": "Développement mobile",
+        "item3": "Contrôle de qualité",
         "item4": "Maintenance",
-        "item5": "Call Center/Support",
-        "link_discover": "More Details"
+        "item5": "Centre d'appel / Support",
+        "link_discover": "Plus D’informations"
       }
     }
   },

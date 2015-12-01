@@ -17,18 +17,26 @@
   -webkit-tap-highlight-color: transparent;
   > button {
     position: absolute;
-    .size(30px, 44px);
-    font: 0/0 a;
-    background: url('@{img}/icon-arrow.png') center no-repeat @bg-btn;
-    border: 0;
-    .border-radius(3px);
-    transition: all .2s ease;
+    background: transparent;
+    -webkit-backface-visibility: hidden;
+    height: 44px;
+    padding: 0;
+    .arrow {
+      .size(30px, 44px);
+      background: url('@{img}/icon-arrow.png') center no-repeat @bg-btn;
+      border: 0;
+      .border-radius(3px);
+      transition: all .2s ease;
+      display: inline-block;
+    }
   }
   .slick-prev,
   .slick-next {
-    &:focus {
-      background-color: rgba(0, 0, 0, .4);
-      box-shadow: 0 0 5px rgba(221,221,221,.5);
+      &:focus {
+        span {
+        background-color: rgba(0, 0, 0, .4);
+        box-shadow: 0 0 5px rgba(221,221,221,.5);
+      }
     }
   }
   .slick-prev {
@@ -125,7 +133,7 @@
 
 @media @screen-xs-only {
   .slick-slider {
-    .slick-next { right: @grid-gutter-width/2;}
-    .slick-prev { left: @grid-gutter-width/2;}
+    .slick-next { .px2em(~"padding", 0 15); right: 0}
+    .slick-prev { .px2em(~"padding", 0 15); left :0;}
   }
 }
