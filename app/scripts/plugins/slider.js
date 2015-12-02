@@ -289,10 +289,10 @@
     classHidden: 'hide',
     slidetoshow: 5,
     slideTablet: 'data-slidetablet',
-    dataSlickIndex: 'data-slick-index'
+    dataSlickIndex: 'data-slick-index',
     indexTargetItem: '',
     elementTarget : '',
-    isFirst: true,
+    isFirst: true
   };
 
   $(function() {
